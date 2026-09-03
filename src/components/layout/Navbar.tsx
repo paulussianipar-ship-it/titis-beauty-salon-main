@@ -34,17 +34,19 @@ export const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isTreatmentsMenuOpen, setIsTreatmentsMenuOpen] = useState(false);
 
-  const navLinks = [
-    { label: 'Solusi Kami', page: 'experts' as const },
-    { label: 'Promo', page: 'membership' as const },
-    { label: 'Lokasi', page: 'locations' as const },
-    { label: 'Artikel', page: 'journal' as const },
-    { label: 'Tentang', page: 'home' as const },
-  ];
-
   const treatmentMenuItems = [
     { label: 'Face', category: 'facial' as const },
     { label: 'Body', category: 'body' as const },
+  ];
+
+  const navLinks = [
+    { label: 'Tes Diagnostik AI', action: () => setIsBeautyFinderOpen(true), isSpecial: true },
+    { label: 'Pakar & Dokter', page: 'experts' as const },
+    { label: 'Apotek Klinis', page: 'shop' as const },
+    { label: 'TITIS Circle', page: 'membership' as const },
+    { label: 'Jurnal Kulit', page: 'journal' as const },
+    { label: 'Panduan Pemulihan', page: 'aftercare' as const },
+    { label: 'Sanctuary & Lokasi', page: 'locations' as const },
   ];
 
   const goToTreatments = (category?: 'facial' | 'body') => {
@@ -121,7 +123,7 @@ export const Navbar: React.FC = () => {
                 )}
               </div>
 
-              {navLinks.map((link, idx) => (
+              {navLinks.slice(0, 4).map((link, idx) => (
                 <button
                   key={idx}
                   id={`nav-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
@@ -204,7 +206,7 @@ export const Navbar: React.FC = () => {
                   )}
                 </div>
 
-                {navLinks.map((link, idx) => (
+                {navLinks.slice(4).map((link, idx) => (
                   <button
                     key={idx}
                     id={`nav-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
