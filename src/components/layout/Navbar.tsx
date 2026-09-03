@@ -11,7 +11,8 @@ import {
   MessageSquare,
   ShieldCheck,
   ChevronRight,
-  Heart
+  Heart,
+  ChevronDown
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -26,19 +27,31 @@ export const Navbar: React.FC = () => {
     setIsConciergeOpen,
     customer,
     isAdminMode,
-    setIsAdminMode
+    setIsAdminMode,
+    setSelectedCategory
   } = useApp();
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isTreatmentsMenuOpen, setIsTreatmentsMenuOpen] = useState(false);
 
   const navLinks = [
-    { label: 'Treatments', page: 'treatments' as const },
     { label: 'Solusi Kami', page: 'experts' as const },
     { label: 'Promo', page: 'membership' as const },
     { label: 'Lokasi', page: 'locations' as const },
     { label: 'Artikel', page: 'journal' as const },
     { label: 'Tentang', page: 'home' as const },
   ];
+
+  const treatmentMenuItems = [
+    { label: 'Face', category: 'facial' as const },
+    { label: 'Body', category: 'body' as const },
+  ];
+
+  const goToTreatments = (category?: 'facial' | 'body') => {
+    setSelectedCategory(category ?? 'all');
+    setActivePage('treatments');
+    setIsTreatmentsMenuOpen(false);
+  };
 
   return (
     <>
@@ -79,7 +92,36 @@ export const Navbar: React.FC = () => {
             
             {/* Left Nav links on desktop */}
             <nav className="hidden lg:flex items-center space-x-6">
-              {navLinks.slice(0, 4).map((link, idx) => (
+              <div className="relative">
+                <button
+                  id="nav-link-treatments"
+                  onClick={() => setIsTreatmentsMenuOpen(!isTreatmentsMenuOpen)}
+                  className={`text-xs tracking-[0.16em] uppercase transition-all duration-300 relative py-1 flex items-center gap-2 ${
+                    activePage === 'treatments'
+                      ? 'text-[#252525] font-semibold'
+                      : 'text-[#252525]/75 hover:text-[#252525]'
+                  }`}
+                >
+                  <span>Treatments</span>
+                  <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${isTreatmentsMenuOpen ? 'rotate-180' : ''}`} />
+                </button>
+
+                {isTreatmentsMenuOpen && (
+                  <div className="absolute left-0 top-full mt-3 w-44 bg-white border border-[#E8DDD3] shadow-xl z-50">
+                    {treatmentMenuItems.map((item) => (
+                      <button
+                        key={item.label}
+                        onClick={() => goToTreatments(item.category)}
+                        className="block w-full text-left px-4 py-3 text-xs uppercase tracking-[0.14em] text-[#252525] hover:bg-[#F7F4EF] transition-colors border-b border-[#E8DDD3] last:border-b-0"
+                      >
+                        {item.label}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {navLinks.map((link, idx) => (
                 <button
                   key={idx}
                   id={`nav-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
@@ -88,6 +130,7 @@ export const Navbar: React.FC = () => {
                       link.action();
                     } else if (link.page) {
                       setActivePage(link.page);
+                      setIsTreatmentsMenuOpen(false);
                     }
                   }}
                   className={`text-xs tracking-[0.16em] uppercase transition-all duration-300 relative py-1 ${
@@ -132,7 +175,36 @@ export const Navbar: React.FC = () => {
             {/* Right Nav links & Actions */}
             <div className="hidden lg:flex items-center space-x-6">
               <nav className="flex items-center space-x-5 mr-2">
-                {navLinks.slice(4).map((link, idx) => (
+                <div className="relative">
+                  <button
+                    id="nav-link-treatments-right"
+                    onClick={() => setIsTreatmentsMenuOpen(!isTreatmentsMenuOpen)}
+                    className={`text-xs tracking-[0.16em] uppercase transition-all duration-300 relative py-1 flex items-center gap-2 ${
+                      activePage === 'treatments'
+                        ? 'text-[#252525] font-semibold'
+                        : 'text-[#252525]/75 hover:text-[#252525]'
+                    }`}
+                  >
+                    <span>Treatments</span>
+                    <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${isTreatmentsMenuOpen ? 'rotate-180' : ''}`} />
+                  </button>
+
+                  {isTreatmentsMenuOpen && (
+                    <div className="absolute right-0 top-full mt-3 w-44 bg-white border border-[#E8DDD3] shadow-xl z-50">
+                      {treatmentMenuItems.map((item) => (
+                        <button
+                          key={item.label}
+                          onClick={() => goToTreatments(item.category)}
+                          className="block w-full text-left px-4 py-3 text-xs uppercase tracking-[0.14em] text-[#252525] hover:bg-[#F7F4EF] transition-colors border-b border-[#E8DDD3] last:border-b-0"
+                        >
+                          {item.label}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                {navLinks.map((link, idx) => (
                   <button
                     key={idx}
                     id={`nav-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
@@ -141,6 +213,7 @@ export const Navbar: React.FC = () => {
                         link.action();
                       } else if (link.page) {
                         setActivePage(link.page);
+                        setIsTreatmentsMenuOpen(false);
                       }
                     }}
                     className={`text-xs tracking-[0.16em] uppercase transition-all duration-300 relative py-1 ${
@@ -277,6 +350,33 @@ export const Navbar: React.FC = () => {
 
               {/* Navigation list */}
               <div className="flex flex-col space-y-3 pt-2">
+                <div className="border-b border-[#E8DDD3]/50 pb-3">
+                  <button
+                    onClick={() => setIsTreatmentsMenuOpen(!isTreatmentsMenuOpen)}
+                    className="flex items-center justify-between w-full text-left py-2.5 text-sm tracking-[0.15em] uppercase text-[#252525] hover:text-[#9B8778] transition-colors"
+                  >
+                    <span>Treatments</span>
+                    <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${isTreatmentsMenuOpen ? 'rotate-180' : ''}`} />
+                  </button>
+
+                  {isTreatmentsMenuOpen && (
+                    <div className="mt-2 ml-3 space-y-2">
+                      {treatmentMenuItems.map((item) => (
+                        <button
+                          key={item.label}
+                          onClick={() => {
+                            goToTreatments(item.category);
+                            setIsMobileMenuOpen(false);
+                          }}
+                          className="block w-full text-left py-2 text-xs uppercase tracking-[0.14em] text-[#252525]/80 hover:text-[#252525]"
+                        >
+                          {item.label}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
                 {navLinks.map((link, idx) => (
                   <button
                     key={idx}
