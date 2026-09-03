@@ -60,7 +60,7 @@ export const AdminCrmDashboard: React.FC = () => {
               </span>
             </div>
             <h1 className="font-serif-luxury text-3xl sm:text-4xl font-light text-white mt-1">
-              Pusat Kontrol Operasional Sanctuary VÉRE
+              Pusat Kontrol Operasional Sanctuary Titis
             </h1>
             <p className="text-xs text-[#E8DDD3]/80 font-light mt-1">
               Kelola janji temu real-time, rekam medis kulit tamu, kesiapan suite privat, dan alokasi dokter spesialis.

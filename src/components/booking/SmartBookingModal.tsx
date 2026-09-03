@@ -144,7 +144,7 @@ export const SmartBookingModal: React.FC = () => {
       aftercareInstructions: [
         'Hindari olahraga berat dan paparan suhu panas tinggi (sauna) selama 24 jam',
         'Cukupi asupan air putih kaya elektrolit',
-        'Gunakan VÉRE Ceramide Barrier Cream yang diresepkan'
+        'Gunakan Titis Ceramide Barrier Cream yang diresepkan'
       ]
     };
 
@@ -175,7 +175,7 @@ export const SmartBookingModal: React.FC = () => {
               <Calendar className="w-4 h-4" />
             </div>
             <div>
-              <span className="editorial-badge text-[#C4A47C]">Reservasi Sanctuary VÉRE</span>
+              <span className="editorial-badge text-[#C4A47C]">Reservasi Sanctuary Titis</span>
               <h3 className="font-serif-luxury text-2xl text-[#F7F4EF] font-light">
                 {bookingStep < 7 ? `Reservasi Cerdas • Langkah ${bookingStep} dari 6` : 'Tiket Janji Temu Dikonfirmasi'}
               </h3>
@@ -259,7 +259,7 @@ export const SmartBookingModal: React.FC = () => {
                   Pilih Lokasi Klinik Sanctuary
                 </h4>
                 <p className="text-xs text-[#252525]/75 mt-1 font-light">
-                  Semua sanctuary VÉRE dilengkapi suite kedap suara privat dan oxygen relaxation lounge.
+                  Semua sanctuary Titis dilengkapi suite kedap suara privat dan oxygen relaxation lounge.
                 </p>
               </div>
 
@@ -660,7 +660,7 @@ export const SmartBookingModal: React.FC = () => {
                     <div className="mt-4 p-3 bg-[#F7F4EF] border border-[#E8DDD3] flex items-center justify-between">
                       <div>
                         <span className="text-[10px] uppercase tracking-wider font-bold text-[#252525] block">
-                          Tukarkan Poin VÉRE
+                          Tukarkan Poin Titis
                         </span>
                         <span className="text-[10px] text-[#9B8778]">
                           Anda memiliki {customer.points} poin (setara ${(customer.points * 0.1).toFixed(0)})
@@ -717,7 +717,7 @@ export const SmartBookingModal: React.FC = () => {
               {/* Digital Pass Card */}
               <div className="max-w-md mx-auto p-6 bg-white border border-[#E8DDD3] shadow-lg text-left space-y-4 relative">
                 <div className="flex items-center justify-between border-b border-[#E8DDD3] pb-3">
-                  <span className="font-serif-luxury text-xl font-bold tracking-widest text-[#252525]">VÉRE PASS</span>
+                  <span className="font-serif-luxury text-xl font-bold tracking-widest text-[#252525]">TITIS PASS</span>
                   <span className="text-[10px] uppercase font-bold text-emerald-700">TERKONFIRMASI</span>
                 </div>
 

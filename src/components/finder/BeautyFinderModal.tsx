@@ -326,7 +326,7 @@ export const BeautyFinderModal: React.FC = () => {
               <div>
                 <span className="text-[10px] tracking-[0.2em] uppercase font-bold text-[#9B8778]">Langkah 4</span>
                 <h4 className="font-serif-luxury text-2xl sm:text-3xl text-[#252525] font-light mt-1">
-                  Berapa alokasi waktu yang ingin Anda luangkan di sanctuary VÉRE?
+                  Berapa alokasi waktu yang ingin Anda luangkan di sanctuary Titis?
                 </h4>
                 <p className="text-xs text-[#252525]/75 mt-1 font-light">
                   Semua ritual sudah termasuk teh seduhan aromaterapi selamat datang dan penguncian lipid pelindung pasca-sesi.

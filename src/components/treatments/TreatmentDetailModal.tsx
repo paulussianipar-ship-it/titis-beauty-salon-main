@@ -164,7 +164,7 @@ export const TreatmentDetailModal: React.FC = () => {
                     </span>
                   )}
                   <span className="text-[10px] text-[#9B8778] uppercase tracking-wider">
-                    • Dapatkan {Math.round(treatment.price * 0.1)} Poin VÉRE
+                    • Dapatkan {Math.round(treatment.price * 0.1)} Poin Titis
                   </span>
                 </div>
               </div>
@@ -396,7 +396,7 @@ export const TreatmentDetailModal: React.FC = () => {
                 onClick={() => setActivePage('shop')}
                 className="text-xs uppercase tracking-widest text-[#252525] font-semibold underline mt-2 sm:mt-0"
               >
-                Kunjungi Apotek VÉRE
+                Kunjungi Apotek Titis
               </button>
             </div>
 

@@ -117,7 +117,7 @@ export const BeautyJournalView: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="editorial-badge text-[#9B8778]">Jurnal Arsitektur Kecantikan</span>
           <h1 className="font-serif-luxury text-4xl sm:text-6xl text-[#252525] font-light mt-2 tracking-tight">
-            Jurnal VÉRE
+            Jurnal Titis
           </h1>
           <p className="text-xs sm:text-sm text-[#252525]/80 font-light mt-4 leading-relaxed">
             Esai mendalam seputar osteopati fasia wajah, pensinyalan bio-eksosom botanika, drainase limfatik, dan filosofi estetika restoratif seluler.

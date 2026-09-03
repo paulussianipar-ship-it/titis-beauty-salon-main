@@ -79,7 +79,7 @@ export const BeautyJourneyView: React.FC = () => {
             <div className="flex items-center gap-6 border-t md:border-t-0 md:border-l border-[#E8DDD3] pt-4 md:pt-0 md:pl-8">
               <div className="text-center">
                 <span className="font-serif-luxury text-3xl font-bold text-[#252525]">{customer.points}</span>
-                <span className="text-[10px] uppercase tracking-widest text-[#9B8778] block">Poin VÉRE</span>
+                <span className="text-[10px] uppercase tracking-widest text-[#9B8778] block">Poin Titis</span>
               </div>
               <div className="text-center">
                 <span className="font-serif-luxury text-3xl font-bold text-[#252525]">{customer.completedVisitsCount}</span>
@@ -99,7 +99,7 @@ export const BeautyJourneyView: React.FC = () => {
           {[
             { id: 'journey' as const, label: 'Lini Masa Perjalanan Kulit' },
             { id: 'appointments' as const, label: `Janji Temu (${upcomingBookings.length})` },
-            { id: 'membership' as const, label: 'Keanggotaan VÉRE Circle' },
+            { id: 'membership' as const, label: 'Keanggotaan Titis Circle' },
             { id: 'profile' as const, label: 'Profil Diagnostik Kulit' },
             { id: 'favorites' as const, label: `Ritual Favorit (${favoriteTreatments.length})` }
           ].map(tab => (
@@ -262,7 +262,7 @@ export const BeautyJourneyView: React.FC = () => {
                       </div>
                       
                       <button
-                        onClick={() => showToast('Permintaan jadwal ulang telah dikirimkan ke concierge VÉRE Anda.')}
+                        onClick={() => showToast('Permintaan jadwal ulang telah dikirimkan ke concierge Titis Anda.')}
                         className="text-xs uppercase tracking-wider font-semibold text-[#252525] hover:text-[#9B8778] underline"
                       >
                         Ubah Jadwal / Bantuan

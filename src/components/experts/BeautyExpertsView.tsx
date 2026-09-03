@@ -37,7 +37,7 @@ export const BeautyExpertsView: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="editorial-badge text-[#9B8778]">Dewan Praktisi & Pakar Klinis</span>
           <h1 className="font-serif-luxury text-4xl sm:text-6xl text-[#252525] font-light mt-2 tracking-tight">
-            Para Maestro & Dokter VÉRE
+            Para Maestro & Dokter Titis
           </h1>
           <p className="text-xs sm:text-sm text-[#252525]/80 font-light mt-4 leading-relaxed">
             Tim kami terdiri dari dokter spesialis kulit lulusan Eropa, terapis fasia osteopati berlisensi Inggris, dan trikologis rambut Swiss. Setiap praktisi membawa dedikasi anatomis minimal satu dekade ke ruang perawatan Anda.

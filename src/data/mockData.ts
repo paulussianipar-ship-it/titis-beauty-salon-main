@@ -19,7 +19,7 @@ export const CLINIC_LOCATIONS: ClinicLocation[] = [
     address: 'Jl. Teuku Umar No. 28, Menteng',
     district: 'Menteng Heritage District',
     phone: '+62 21 3912 8800',
-    email: 'menteng@vereritual.com',
+    email: 'menteng@titisbeauty.com',
     hours: 'Senin – Sabtu: 09:00 – 20:00 WIB | Minggu: 10:00 – 18:00 WIB',
     image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=85',
     suitesCount: 8,
@@ -35,7 +35,7 @@ export const CLINIC_LOCATIONS: ClinicLocation[] = [
     address: '468 N Rodeo Drive, Lantai 3 Penthouse',
     district: 'Golden Triangle',
     phone: '+1 (310) 892-4400',
-    email: 'beverlyhills@vereritual.com',
+    email: 'beverlyhills@titisbeauty.com',
     hours: 'Senin – Sabtu: 09:00 – 20:00 | Minggu: 10:00 – 18:00',
     image: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=85',
     suitesCount: 8,
@@ -51,7 +51,7 @@ export const CLINIC_LOCATIONS: ClinicLocation[] = [
     address: '15 Place Vendôme, 1er Arrondissement',
     district: 'Vendôme',
     phone: '+33 1 42 68 55 00',
-    email: 'paris@vereritual.com',
+    email: 'paris@titisbeauty.com',
     hours: 'Selasa – Sabtu: 09:30 – 19:30 | Senin: Tutup',
     image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=85',
     suitesCount: 5,
@@ -67,7 +67,7 @@ export const CLINIC_LOCATIONS: ClinicLocation[] = [
     address: '22 Berkeley Square, Mayfair',
     district: 'West End',
     phone: '+44 20 7946 0912',
-    email: 'mayfair@vereritual.com',
+    email: 'mayfair@titisbeauty.com',
     hours: 'Senin – Sabtu: 09:00 – 19:30 | Minggu: 11:00 – 17:00',
     image: 'https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&w=1200&q=85',
     suitesCount: 7,
@@ -135,7 +135,7 @@ export const TREATMENTS: Treatment[] = [
     slug: 'sculptural-buccal-facelift',
     name: 'Arsitektur Wajah & Pijat Sculptural Buccal',
     subtitle: 'Rekonstruksi Fasia Mendalam & Kontur Non-Invasif',
-    tagline: 'Ritual pemahatan manual khas VÉRE yang mempertegas tulang pipi dan melemaskan ketegangan miofasial.',
+    tagline: 'Ritual pemahatan manual khas Titis yang mempertegas tulang pipi dan melemaskan ketegangan miofasial.',
     category: 'facial',
     durationMinutes: 90,
     price: 420,
@@ -160,28 +160,28 @@ export const TREATMENTS: Treatment[] = [
         phaseName: 'Inhalasi Aromaterapi & Pelepasan Kranial',
         durationMin: 15,
         description: 'Pernapasan diafragma terpandu dengan lavender Prancis organik dan kayu cedar hangat, disertai dekompresi sutura kranial lembut.',
-        productsUsed: 'Eliksir Penenang Botanika VÉRE'
+        productsUsed: 'Eliksir Penenang Botanika Titis'
       },
       {
         stepNumber: 2,
         phaseName: 'Double Cleanse Enzimatik & Pembersihan Jalur Limfatik',
         durationMin: 20,
         description: 'Emulsifikasi minyak camellia hangat dilanjutkan eksfoliasi ultrasonik untuk membuka jalur penetrasi seluler.',
-        productsUsed: 'Balsam Pembersih Restoratif VÉRE'
+        productsUsed: 'Balsam Pembersih Restoratif Titis'
       },
       {
         stepNumber: 3,
         phaseName: 'Pemodelan Sculptural Buccal Intra-Oral',
         durationMin: 30,
         description: 'Pijat intra-oral bersarung tangan steril medis memanipulasi kelompok otot zygomaticus, masseter, dan orbicularis oris dari dalam rongga mulut.',
-        productsUsed: 'Serum Luncur Peptida VÉRE'
+        productsUsed: 'Serum Luncur Peptida Titis'
       },
       {
         stepNumber: 4,
         phaseName: 'Penguncian Krioterapik & Lipid Pelindung Barier',
         durationMin: 25,
         description: 'Cryo-globe baja bedah bersuhu -4°C untuk mengunci bio-peptida aktif dan mempertahankan kontur pahatan wajah.',
-        productsUsed: 'Krim Barier Seluler VÉRE'
+        productsUsed: 'Krim Barier Seluler Titis'
       }
     ],
     skinConcerns: ['anti-aging', 'lifting-contour', 'glow-radiance'],
@@ -250,28 +250,28 @@ export const TREATMENTS: Treatment[] = [
         phaseName: 'Pembersihan Kavitasi Ultrasonik Pori Mendalam',
         durationMin: 15,
         description: 'Gelombang akustik mikro membersihkan kotoran dan sebum pori secara menyeluruh tanpa pemencetan manual yang menyakitkan.',
-        productsUsed: 'Larutan Enzim Penjernih VÉRE'
+        productsUsed: 'Larutan Enzim Penjernih Titis'
       },
       {
         stepNumber: 2,
         phaseName: 'Infusi Nano-Channeling Tanpa Rasa Sakit',
         durationMin: 30,
         description: 'Ujung mikro silikon medis membuka 200.000 jalur mikroskopis per menit untuk menyalurkan konsentrat eksosom aktif.',
-        productsUsed: 'Bio-Serum Eksosom Murni 5B VÉRE'
+        productsUsed: 'Bio-Serum Eksosom Murni 5B Titis'
       },
       {
         stepNumber: 3,
         phaseName: 'Terapi Oksigen Hiperbarik 98% Murni',
         durationMin: 15,
         description: 'Aliran oksigen murni bertekanan yang diperkaya polifenol teh hijau dan peptida tembaga untuk oksigenasi sel.',
-        productsUsed: 'Kabut Oksigen Pembaharu VÉRE'
+        productsUsed: 'Kabut Oksigen Pembaharu Titis'
       },
       {
         stepNumber: 4,
         phaseName: 'Penyegelan Sejuk Cryo-Elektroporasi',
         durationMin: 15,
         description: 'Arus mikro berdenyut sub-nol untuk mengunci peptida ke dalam matriks kulit sekaligus menenangkan kulit seketika.',
-        productsUsed: 'Tirai Perbaikan Ceramide VÉRE'
+        productsUsed: 'Tirai Perbaikan Ceramide Titis'
       }
     ],
     skinConcerns: ['anti-aging', 'hydration', 'pore-refining', 'glow-radiance'],
@@ -297,7 +297,7 @@ export const TREATMENTS: Treatment[] = [
     faqs: [
       {
         question: 'Dari mana asal eksosom yang digunakan?',
-        answer: 'VÉRE menggunakan 100% eksosom tumbuhan terbio-fermentasi murni yang dikembangkan di laboratorium Swiss, bebas dari turunan biologis manusia maupun hewani.'
+        answer: 'Titis menggunakan 100% eksosom tumbuhan terbio-fermentasi murni yang dikembangkan di laboratorium Swiss, bebas dari turunan biologis manusia maupun hewani.'
       },
       {
         question: 'Apakah wajah akan memerah setelah perawatan?',
@@ -334,28 +334,28 @@ export const TREATMENTS: Treatment[] = [
         phaseName: 'Eksfoliasi Vortex Asam Laktat & Glukosamin',
         durationMin: 15,
         description: 'Ujung spiral hidrodinamik mengangkat korneosit mati dengan lembut sembari membasahi kulit dengan air mentimun menyejukkan.',
-        productsUsed: 'Cairan Luminositas VÉRE I'
+        productsUsed: 'Cairan Luminositas Titis I'
       },
       {
         stepNumber: 2,
         phaseName: 'Ekstraksi Asam Salisilat Area T-Zone',
         durationMin: 15,
         description: 'Vakum vortex terfokus membersihkan sumbatan sebum di hidung, dahi, dan dagu.',
-        productsUsed: 'Cairan Penjernih VÉRE II'
+        productsUsed: 'Cairan Penjernih Titis II'
       },
       {
         stepNumber: 3,
         phaseName: 'Pemahatan Wajah Krio Sub-Nol (Sub-Zero Glow)',
         durationMin: 15,
         description: 'Terapi termal dingin terkontrol untuk menenangkan kapiler darah dan mengencangkan jaringan kulit.',
-        productsUsed: 'Konsentrat Laut Asam Hialuronat VÉRE'
+        productsUsed: 'Konsentrat Laut Asam Hialuronat Titis'
       },
       {
         stepNumber: 4,
         phaseName: 'Topeng Hidrasi Alga Elektrolit',
         durationMin: 15,
         description: 'Masker karet spirulina peel-off yang mengunci perlindungan antioksidan dan kelembapan mendalam.',
-        productsUsed: 'Krim Barier Botanika VÉRE'
+        productsUsed: 'Krim Barier Botanika Titis'
       }
     ],
     skinConcerns: ['hydration', 'pore-refining', 'acne-texture', 'glow-radiance'],
@@ -381,7 +381,7 @@ export const TREATMENTS: Treatment[] = [
     faqs: [
       {
         question: 'Apakah ini sama dengan hydrafacial biasa?',
-        answer: 'VÉRE Cryo-Hydro menyempurnakan teknologi ini dengan formula nutrisi kelas medis yang diracik segar dan memadukan hisapan vortex spiral dengan cryo-toning -4°C untuk efek kencang seketika.'
+        answer: 'Titis Cryo-Hydro menyempurnakan teknologi ini dengan formula nutrisi kelas medis yang diracik segar dan memadukan hisapan vortex spiral dengan cryo-toning -4°C untuk efek kencang seketika.'
       }
     ]
   },
@@ -413,28 +413,28 @@ export const TREATMENTS: Treatment[] = [
         phaseName: 'Aktivasi Limfatik Bulu Sutra Agave',
         durationMin: 20,
         description: 'Penyikatan tubuh kering sistematis mengikuti jalur kelenjar getah bening menuju muara limfa utama.',
-        productsUsed: 'Sikat Tubuh Agave Alami VÉRE'
+        productsUsed: 'Sikat Tubuh Agave Alami Titis'
       },
       {
         stepNumber: 2,
         phaseName: 'Pengilapan Mineral Kuarsa & Garam Laut Hangat',
         durationMin: 25,
         description: 'Lulur eksfoliasi beraroma rosemary, juniper berry, dan minyak almond manis perasan dingin.',
-        productsUsed: 'Glaze Tubuh Garam Laut Mati VÉRE'
+        productsUsed: 'Glaze Tubuh Garam Laut Mati Titis'
       },
       {
         stepNumber: 3,
         phaseName: 'Pijatan Drainase Fasia Berirama',
         durationMin: 35,
         description: 'Gerakan sapuan jaringan dalam dan alat terapi kayu khusus untuk menggerakkan cairan interstitial.',
-        productsUsed: 'Minyak Tubuh Pemahat Botanika VÉRE'
+        productsUsed: 'Minyak Tubuh Pemahat Botanika Titis'
       },
       {
         stepNumber: 4,
         phaseName: 'Balutan Selimut Termal & Seduhan Teh Herbal',
         durationMin: 10,
         description: 'Penyelimutan inframerah hangat untuk menyerap omega nutrisi sambil menikmati seduhan teh detoks kembang sepatu.',
-        productsUsed: 'Infusi Herbal Artisan VÉRE'
+        productsUsed: 'Infusi Herbal Artisan Titis'
       }
     ],
     skinConcerns: ['lifting-contour', 'hydration', 'glow-radiance'],
@@ -489,28 +489,28 @@ export const TREATMENTS: Treatment[] = [
         phaseName: 'Analisis Mikroskopi Trikologi 200x',
         durationMin: 15,
         description: 'Pemeriksaan densitas folikel dan ketebalan sebum secara digital di layar sebelum tindakan.',
-        productsUsed: 'Pemindai Trikologi Presisi VÉRE'
+        productsUsed: 'Pemindai Trikologi Presisi Titis'
       },
       {
         stepNumber: 2,
         phaseName: 'Eksfoliasi Keratolitik & Pijat Akupresur Leher',
         durationMin: 20,
         description: 'Aplikasi asam glikolat dan seng PCA diiringi pijatan titik meridian kranial untuk sirkulasi darah.',
-        productsUsed: 'Eliksir Eksfoliasi Kulit Kepala VÉRE'
+        productsUsed: 'Eliksir Eksfoliasi Kulit Kepala Titis'
       },
       {
         stepNumber: 3,
         phaseName: 'Infusi Peptida Tembaga Mikro-Arus',
         durationMin: 25,
         description: 'Elektro-porasi tanpa jarum menyalurkan tripeptida tembaga (GHK-Cu) dan biotin langsung ke papila dermal folikel.',
-        productsUsed: 'Serum Folikel Trikologi VÉRE'
+        productsUsed: 'Serum Folikel Trikologi Titis'
       },
       {
         stepNumber: 4,
         phaseName: 'Terapi Laser Tingkat Rendah (LLLT 650nm)',
         durationMin: 15,
         description: 'Dioda laser dingin merangsang produksi ATP mitokondria di sel folikel rambut.',
-        productsUsed: 'Perangkat Laser Trikologi Medis VÉRE'
+        productsUsed: 'Perangkat Laser Trikologi Medis Titis'
       }
     ],
     skinConcerns: ['hair-density', 'anti-aging'],
@@ -565,28 +565,28 @@ export const TREATMENTS: Treatment[] = [
         phaseName: 'Pemetaan Spektral Pigmen & Anestesi Topikal',
         durationMin: 20,
         description: 'Pemindaian UV mendeteksi kedalaman melanosit disertai aplikasi krim anestesi mewah beraroma mawar.',
-        productsUsed: 'Krim Anestesi Kenyamanan VÉRE'
+        productsUsed: 'Krim Anestesi Kenyamanan Titis'
       },
       {
         stepNumber: 2,
         phaseName: 'Penghantaran Laser Pecahan Presisi',
         durationMin: 25,
         description: 'Denyut laser mikro terfokus menciptakan zona termal mikroskopis untuk merangsang perbaikan seluler alami.',
-        productsUsed: 'Laser Dermal Safir VÉRE'
+        productsUsed: 'Laser Dermal Safir Titis'
       },
       {
         stepNumber: 3,
         phaseName: 'Infusi Krio-Soothe Peptida Pendingin',
         durationMin: 15,
         description: 'Aplikasi topeng bio-selulosa beku kaya centella asiatica murni dan beta-glukan untuk meredakan panas jaringan.',
-        productsUsed: 'Topeng Pemulihan Cica VÉRE'
+        productsUsed: 'Topeng Pemulihan Cica Titis'
       },
       {
         stepNumber: 4,
         phaseName: 'Pelindung Tabir Surya Mineral Mikronisasi',
         durationMin: 15,
         description: 'Proteksi spektrum luas SPF 50+ PA++++ berbahan seng oksida murni bebas minyak.',
-        productsUsed: 'Tabir Surya Pelindung Sutra VÉRE'
+        productsUsed: 'Tabir Surya Pelindung Sutra Titis'
       }
     ],
     skinConcerns: ['pigmentation', 'acne-texture', 'anti-aging', 'pore-refining'],
@@ -915,7 +915,7 @@ export const JOURNAL_ARTICLES: JournalArticle[] = [
         },
         {
           heading: 'Mengapa Eksosom Tumbuhan Jauh Lebih Aman & Murni',
-          body: 'Di VÉRE, kami menolak penggunaan eksosom turunan biologis manusia demi menjaga kemurnian etis dan sterilitas medis mutlak. Melalui bio-fermentasi tumbuhan Alpen di laboratorium Swiss, kami mengekstraksi eksosom dengan afinitas tinggi pada reseptor kulit manusia tanpa risiko kontaminasi atau reaksi imun negatif.'
+          body: 'Di Titis, kami menolak penggunaan eksosom turunan biologis manusia demi menjaga kemurnian etis dan sterilitas medis mutlak. Melalui bio-fermentasi tumbuhan Alpen di laboratorium Swiss, kami mengekstraksi eksosom dengan afinitas tinggi pada reseptor kulit manusia tanpa risiko kontaminasi atau reaksi imun negatif.'
         }
       ],
       conclusion: 'Dengan memadukan eksosom botani murni bersama nano-channeling klinis tanpa rasa sakit, kita memasuki era baru di mana usia kronologis kulit dapat diputar kembali secara harmonis.'
@@ -934,7 +934,7 @@ export const MEMBERSHIP_TIERS: MembershipTierDetail[] = [
     color: '#9B8778',
     badgeBg: 'bg-[#E8DDD3]/40 border-[#9B8778]/30 text-[#252525]',
     perks: [
-      'Cashback reward 5% dalam bentuk poin VÉRE di setiap transaksi',
+      'Cashback reward 5% dalam bentuk poin Titis di setiap transaksi',
       'Akses prioritas reservasi janji temu 14 hari sebelumnya',
       'Teh herbal pilihan & konsultasi sensorik gratis di setiap sesi',
       'Hadiah ulang tahun eksklusif berupa voucher potongan IDR 500.000'
@@ -943,7 +943,7 @@ export const MEMBERSHIP_TIERS: MembershipTierDetail[] = [
       'Pemeriksaan Analisis Kulit 3D Visia AI di awal setiap kedatangan'
     ],
     exclusiveAccess: [
-      'Akses ke Jurnal Ilmiah VÉRE dan panduan perawatan mandiri di rumah'
+      'Akses ke Jurnal Ilmiah Titis dan panduan perawatan mandiri di rumah'
     ]
   },
   {
@@ -996,7 +996,7 @@ export const MEMBERSHIP_TIERS: MembershipTierDetail[] = [
 export const INITIAL_CUSTOMER: CustomerProfile = {
   id: 'cust-audrey-01',
   name: 'Audrey Titis Wardhani',
-  email: 'audrey.titis@vereritual.com',
+  email: 'audrey.titis@titisbeauty.com',
   phone: '+62 812 8899 7711',
   avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=85',
   tier: 'Signature',
@@ -1032,7 +1032,7 @@ export const INITIAL_CUSTOMER: CustomerProfile = {
       timeSlot: '14:30',
       customerInfo: {
         name: 'Audrey Titis Wardhani',
-        email: 'audrey.titis@vereritual.com',
+        email: 'audrey.titis@titisbeauty.com',
         phone: '+62 812 8899 7711',
         skinConcerns: ['lifting-contour', 'anti-aging'],
         notes: 'Fokuskan pada pelepasan ketegangan di area rahang kanan.',
@@ -1069,7 +1069,7 @@ export const INITIAL_CUSTOMER: CustomerProfile = {
       timeSlot: '11:00',
       customerInfo: {
         name: 'Audrey Titis Wardhani',
-        email: 'audrey.titis@vereritual.com',
+        email: 'audrey.titis@titisbeauty.com',
         phone: '+62 812 8899 7711',
         skinConcerns: ['hydration', 'glow-radiance'],
         isFirstVisit: false
@@ -1109,14 +1109,14 @@ export const INITIAL_CUSTOMER: CustomerProfile = {
   vouchers: [
     {
       id: 'vouch-vip-20',
-      code: 'VEREVIP20',
+      code: 'TITISVIP20',
       title: 'Privilese Diskon Anggota 20%',
       discountType: 'percentage',
       value: 20,
       minSpend: 300,
       expiresAt: '31 Desember 2026',
       isRedeemed: false,
-      description: 'Berlaku untuk semua ritual perawatan wajah & tubuh di seluruh Atelier VÉRE.'
+      description: 'Berlaku untuk semua ritual perawatan wajah & tubuh di seluruh Atelier Titis.'
     },
     {
       id: 'vouch-gift-50',

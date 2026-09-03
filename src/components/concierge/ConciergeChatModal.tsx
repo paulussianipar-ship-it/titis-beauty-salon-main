@@ -36,7 +36,7 @@ export const ConciergeChatModal: React.FC = () => {
     {
       id: 'm1',
       sender: 'concierge',
-      text: `Selamat datang, ${customer.name.split(' ')[0]}. Saya Élodie, Konsultan Estetika & Concierge Pribadi VÉRE Anda. Bagaimana saya dapat membantu memandu ritual arsitektur kulit Anda hari ini?`,
+      text: `Selamat datang, ${customer.name.split(' ')[0]}. Saya Élodie, Konsultan Estetika & Concierge Pribadi Titis Anda. Bagaimana saya dapat membantu memandu ritual arsitektur kulit Anda hari ini?`,
       timestamp: 'Baru saja'
     }
   ]);
@@ -83,7 +83,7 @@ export const ConciergeChatModal: React.FC = () => {
         reply = 'dr. Audrey Wardhani, Sp.DVE membuka sesi konsultasi dan ritual privat di Flagship Sanctuary Menteng Jakarta dari hari Selasa hingga Sabtu. Apakah Anda ingin saya membukakan kalender reservasinya?';
         suggestedTrtId = 'trt-sculptural-buccal';
       } else {
-        reply = 'Terima kasih telah menghubungi VÉRE. Berdasarkan kebutuhan Anda, saya dapat memandu Anda melalui tes diagnostik kulit pintar 60 detik atau menghubungkan Anda langsung dengan Master Aesthetician kami.';
+        reply = 'Terima kasih telah menghubungi Titis. Berdasarkan kebutuhan Anda, saya dapat memandu Anda melalui tes diagnostik kulit pintar 60 detik atau menghubungkan Anda langsung dengan Master Aesthetician kami.';
       }
 
       const botMsg: ChatMessage = {
@@ -120,7 +120,7 @@ export const ConciergeChatModal: React.FC = () => {
             </div>
             <div>
               <div className="flex items-center space-x-1.5">
-                <h4 className="font-serif-luxury text-lg text-white">Élodie • VÉRE Concierge</h4>
+                <h4 className="font-serif-luxury text-lg text-white">Élodie • Titis Concierge</h4>
               </div>
               <span className="text-[10px] text-[#C4A47C] tracking-widest uppercase font-semibold">
                 Konsultan Estetika Kulit Pribadi

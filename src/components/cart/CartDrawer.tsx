@@ -164,7 +164,7 @@ export const CartDrawer: React.FC = () => {
                 <span className="font-serif-luxury text-xl">${total.toFixed(2)}</span>
               </div>
               <p className="text-[10px] text-[#9B8778] text-right">
-                Mendapatkan +{pointsEarned} Poin Kecantikan VÉRE
+                Mendapatkan +{pointsEarned} Poin Kecantikan Titis
               </p>
             </div>
 

@@ -8,7 +8,7 @@ export const Footer: React.FC = () => {
 
   const handleNewsletterSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    showToast('Terima kasih. Anda telah terdaftar dalam warta eksklusif VÉRE Journal.');
+    showToast('Terima kasih. Anda telah terdaftar dalam warta eksklusif Titis Journal.');
   };
 
   return (
@@ -17,7 +17,7 @@ export const Footer: React.FC = () => {
         
         {/* Top Editorial Quote */}
         <div className="text-center pb-16 border-b border-white/10">
-          <span className="editorial-badge text-[#C4A47C]">Filosofi VÉRE</span>
+          <span className="editorial-badge text-[#C4A47C]">Filosofi Titis</span>
           <h2 className="font-serif-luxury text-3xl sm:text-5xl lg:text-6xl text-[#F7F4EF] font-light tracking-wide mt-4 max-w-4xl mx-auto leading-tight italic">
             "Kecantikan Anda bukanlah sebuah intervensi, melainkan ritual keabadian yang penuh kesadaran."
           </h2>
@@ -46,7 +46,7 @@ export const Footer: React.FC = () => {
           <div className="lg:col-span-2 space-y-5">
             <div className="flex items-center space-x-2">
               <span className="font-serif-luxury text-3xl tracking-[0.25em] text-[#F7F4EF] uppercase">
-                VÉRE
+                TITIS
               </span>
               <span className="w-1.5 h-1.5 rounded-full bg-[#C4A47C]" />
             </div>
@@ -56,7 +56,7 @@ export const Footer: React.FC = () => {
             
             <div className="pt-2 text-xs text-[#9B8778]">
               <p className="tracking-widest uppercase text-[10px] text-[#C4A47C] font-semibold mb-1">Layanan VIP Client Desk Global</p>
-              <p className="text-[#E8DDD3]/90 font-mono">+62 (21) 3912-8800 • concierge@vereritual.com</p>
+              <p className="text-[#E8DDD3]/90 font-mono">+62 (21) 3912-8800 • concierge@titisbeauty.com</p>
             </div>
           </div>
 
@@ -143,7 +143,7 @@ export const Footer: React.FC = () => {
         {/* Bottom Legal & Ethics Bar */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between text-[11px] text-[#9B8778] font-light space-y-4 md:space-y-0">
           <div className="flex items-center space-x-2">
-            <span>© {new Date().getFullYear()} VÉRE Aesthetics International Corp.</span>
+            <span>© {new Date().getFullYear()} Titis Aesthetics International Corp.</span>
             <span>•</span>
             <span className="text-[#E8DDD3]/60">Hak cipta dilindungi undang-undang.</span>
           </div>
@@ -153,7 +153,7 @@ export const Footer: React.FC = () => {
               Protokol Klinis Medis
             </button>
             <button onClick={() => setActivePage('membership')} className="hover:text-white transition-colors">
-              Privilese Anggota VÉRE Circle
+              Privilese Anggota TITIS Circle
             </button>
             <span className="hover:text-white cursor-pointer transition-colors">
               Kebijakan Privasi & Etika Medis

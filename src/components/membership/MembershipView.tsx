@@ -25,7 +25,7 @@ export const MembershipView: React.FC = () => {
 
   const handleUpgradeTier = (tier: 'Essential' | 'Signature' | 'Privé') => {
     setCustomer(prev => ({ ...prev, tier }));
-    showToast(`Selamat datang di Lingkaran VÉRE ${tier}. Hak istimewa Anda telah aktif.`);
+    showToast(`Selamat datang di Lingkaran Titis ${tier}. Hak istimewa Anda telah aktif.`);
   };
 
   return (
@@ -36,7 +36,7 @@ export const MembershipView: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="editorial-badge text-[#9B8778]">Loyalitas & Elevasi Eksklusif</span>
           <h1 className="font-serif-luxury text-4xl sm:text-6xl text-[#252525] font-light mt-2 tracking-tight">
-            Lingkaran Keanggotaan VÉRE
+            Lingkaran Keanggotaan Titis
           </h1>
           <p className="text-xs sm:text-sm text-[#252525]/80 font-light mt-4 leading-relaxed">
             Dedikasi kami untuk kesinambungan kilau kulit Anda. Nikmati privilese suite privat, concierge estetika personal 24/7, dan cashback poin hingga 15% di seluruh sanctuary global kami.
@@ -176,7 +176,7 @@ export const MembershipView: React.FC = () => {
                   </li>
                   <li className="flex items-start space-x-2">
                     <CheckCircle2 className="w-4 h-4 text-[#9B8778] shrink-0 mt-0.5" />
-                    <span>Fasilitas penjemputan sopir pribadi VÉRE</span>
+                    <span>Fasilitas penjemputan sopir pribadi Titis</span>
                   </li>
                   <li className="flex items-start space-x-2">
                     <CheckCircle2 className="w-4 h-4 text-[#9B8778] shrink-0 mt-0.5" />

@@ -134,7 +134,7 @@ export const AftercareGuideView: React.FC = () => {
             Panduan Perawatan Pasca-Ritual
           </h1>
           <p className="text-xs sm:text-sm text-[#252525]/80 font-light mt-4 leading-relaxed">
-            Hasil estetika klinis tertinggi bergantung pada pemeliharaan 72 jam pertama. Ikuti instruksi para dokter dermatologi dan master facialist VÉRE untuk memastikan regenerasi kolagen optimal tanpa efek samping.
+            Hasil estetika klinis tertinggi bergantung pada pemeliharaan 72 jam pertama. Ikuti instruksi para dokter dermatologi dan master facialist Titis untuk memastikan regenerasi kolagen optimal tanpa efek samping.
           </p>
         </div>
 

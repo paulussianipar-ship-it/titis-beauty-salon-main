@@ -48,7 +48,7 @@ export const BeautyShopView: React.FC = () => {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="editorial-badge text-[#9B8778]">Apotek Klinis VÉRE</span>
+          <span className="editorial-badge text-[#9B8778]">Apotek Klinis Titis</span>
           <h1 className="font-serif-luxury text-4xl sm:text-6xl text-[#252525] font-light mt-2 tracking-tight">
             Formulasi Botanika & Bio-Eksosom
           </h1>

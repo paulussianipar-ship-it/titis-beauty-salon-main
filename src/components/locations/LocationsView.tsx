@@ -28,10 +28,10 @@ export const LocationsView: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="editorial-badge text-[#9B8778]">Sanctuary Privat Global</span>
           <h1 className="font-serif-luxury text-4xl sm:text-6xl text-[#252525] font-light mt-2 tracking-tight">
-            Atelier & Klinik VÉRE
+            Atelier & Klinik Titis
           </h1>
           <p className="text-xs sm:text-sm text-[#252525]/80 font-light mt-4 leading-relaxed">
-            Setiap sanctuary VÉRE dirancang sebagai oase akustik yang tenang, dilengkapi suite perawatan privat berstandar filtrasi udara medis klinis, dan lounge teh relaksasi pasca-sesi.
+            Setiap sanctuary Titis dirancang sebagai oase akustik yang tenang, dilengkapi suite perawatan privat berstandar filtrasi udara medis klinis, dan lounge teh relaksasi pasca-sesi.
           </p>
         </div>
 

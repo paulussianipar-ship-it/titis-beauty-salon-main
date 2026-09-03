@@ -36,7 +36,7 @@ export const Navbar: React.FC = () => {
     { label: 'Tes Diagnostik AI', action: () => setIsBeautyFinderOpen(true), isSpecial: true },
     { label: 'Pakar & Dokter', page: 'experts' as const },
     { label: 'Apotek Klinis', page: 'shop' as const },
-    { label: 'VÉRE Circle', page: 'membership' as const },
+    { label: 'TITIS Circle', page: 'membership' as const },
     { label: 'Jurnal Kulit', page: 'journal' as const },
     { label: 'Panduan Pemulihan', page: 'aftercare' as const },
     { label: 'Sanctuary & Lokasi', page: 'locations' as const },
@@ -121,7 +121,7 @@ export const Navbar: React.FC = () => {
               >
                 <div className="flex items-center space-x-1">
                   <span className="font-serif-luxury text-3xl md:text-4xl tracking-[0.25em] text-[#252525] font-light uppercase transition-transform duration-500 group-hover:tracking-[0.3em]">
-                    VÉRE
+                    TITIS
                   </span>
                   <span className="w-1.5 h-1.5 rounded-full bg-[#C4A47C] -mt-2" />
                 </div>

@@ -54,7 +54,7 @@ export const HomeView: React.FC = () => {
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=2000&q=90" 
-            alt="VÉRE Sanctuary Kemewahan"
+            alt="Titis Sanctuary Kemewahan"
             className="w-full h-full object-cover object-center filter brightness-[0.92] contrast-[1.05] transform scale-105 transition-transform duration-1000 ease-out"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#252525]/75 via-[#252525]/45 to-[#252525]/60 mix-blend-multiply" />
@@ -164,7 +164,7 @@ export const HomeView: React.FC = () => {
               Setiap lekukan, bayangan, dan kontur wajah menyimpan jejak postur, stres, dan ketegangan bertahun-tahun. Pendekatan konvensional seringkali bergantung pada filler artifisial yang membebani otot wajah seiring waktu.
             </p>
             <p className="text-sm text-[#252525]/80 font-light leading-relaxed">
-              Di VÉRE, para pakar kami menerapkan teknik osteopati intra-oral buccal yang mendalam, eksosom bio-fermentasi tumbuhan, dan frekuensi kriogenik sub-nol untuk merestorasi kesehatan kulit dari dalam.
+              Di Titis, para pakar kami menerapkan teknik osteopati intra-oral buccal yang mendalam, eksosom bio-fermentasi tumbuhan, dan frekuensi kriogenik sub-nol untuk merestorasi kesehatan kulit dari dalam.
             </p>
 
             <div className="pt-4 flex flex-wrap items-center gap-6">
@@ -191,7 +191,7 @@ export const HomeView: React.FC = () => {
               <div className="overflow-hidden shadow-lg aspect-[4/5] relative group">
                 <img 
                   src="https://images.unsplash.com/photo-1512290900672-1f41d996156e?auto=format&fit=crop&w=800&q=85" 
-                  alt="Detail Perawatan VÉRE"
+                  alt="Detail Perawatan Titis"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
                 />
                 <div className="absolute bottom-4 left-4 right-4 p-4 bg-[#F7F4EF]/90 backdrop-blur-md text-[#252525] border border-[#E8DDD3]">
@@ -237,7 +237,7 @@ export const HomeView: React.FC = () => {
               <div className="overflow-hidden shadow-lg aspect-[4/5] relative group">
                 <img 
                   src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=85" 
-                  alt="Interior Sanctuary VÉRE"
+                  alt="Interior Sanctuary Titis"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
                 />
                 <div className="absolute bottom-4 left-4 right-4 p-4 bg-[#F7F4EF]/90 backdrop-blur-md text-[#252525] border border-[#E8DDD3]">
@@ -560,14 +560,14 @@ export const HomeView: React.FC = () => {
         </div>
       </section>
 
-      {/* 6. Membership & Loyalty: The VÉRE Circle */}
+      {/* 6. Membership & Loyalty: The Titis Circle */}
       <section id="membership-teaser-section" className="py-24 bg-[#E8DDD3]/30 border-y border-[#E8DDD3]">
         <div className="max-w-7xl mx-auto px-6">
           
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="editorial-badge text-[#9B8778]">Keanggotaan & Loyalitas</span>
             <h2 className="font-serif-luxury text-3xl sm:text-5xl text-[#252525] font-light mt-2">
-              VÉRE Circle
+              Titis Circle
             </h2>
             <p className="text-sm text-[#252525]/80 font-light mt-4 leading-relaxed">
               Tingkatkan status Anda melalui tiga tingkatan privilese eksklusif. Nikmati konsierge kulit pribadi, upgrade suite perawatan VIP, dan cashback hingga 15% dalam Poin Kecantikan.
