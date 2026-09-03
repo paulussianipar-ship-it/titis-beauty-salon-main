@@ -32,14 +32,12 @@ export const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { label: 'Ritual Perawatan', page: 'treatments' as const },
-    { label: 'Tes Diagnostik AI', action: () => setIsBeautyFinderOpen(true), isSpecial: true },
-    { label: 'Pakar & Dokter', page: 'experts' as const },
-    { label: 'Apotek Klinis', page: 'shop' as const },
-    { label: 'TITIS Circle', page: 'membership' as const },
-    { label: 'Jurnal Kulit', page: 'journal' as const },
-    { label: 'Panduan Pemulihan', page: 'aftercare' as const },
-    { label: 'Sanctuary & Lokasi', page: 'locations' as const },
+    { label: 'Treatments', page: 'treatments' as const },
+    { label: 'Solusi Kami', page: 'experts' as const },
+    { label: 'Promo', page: 'membership' as const },
+    { label: 'Lokasi', page: 'locations' as const },
+    { label: 'Artikel', page: 'journal' as const },
+    { label: 'Tentang', page: 'home' as const },
   ];
 
   return (
