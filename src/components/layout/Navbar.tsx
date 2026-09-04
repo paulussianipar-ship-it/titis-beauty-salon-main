@@ -132,38 +132,6 @@ export const Navbar: React.FC = () => {
 
             {/* Right Nav links & Actions */}
             <div className="hidden lg:flex items-center space-x-6">
-              {/* Shopping Bag Button */}
-              <button
-                id="nav-cart-btn"
-                onClick={() => setIsCartOpen(true)}
-                className="relative p-2 text-[#252525] hover:text-[#9B8778] transition-colors"
-                title="Lihat Tas Belanja"
-              >
-                <ShoppingBag className="w-4 h-4" />
-                {cartCount > 0 && (
-                  <span className="absolute top-0 right-0 w-4 h-4 bg-[#252525] text-white text-[9px] font-bold rounded-full flex items-center justify-center">
-                    {cartCount}
-                  </span>
-                )}
-              </button>
-
-              {/* Customer Account Button */}
-              <button
-                id="nav-account-btn"
-                onClick={() => setActivePage('account')}
-                className={`flex items-center space-x-2 pl-2 pr-3 py-1.5 rounded-full border transition-all duration-300 ${
-                  activePage === 'account'
-                    ? 'border-[#252525] bg-[#E8DDD3]/60 text-[#252525]'
-                    : 'border-[#E8DDD3] bg-white/60 hover:border-[#9B8778] text-[#252525]'
-                }`}
-              >
-                <img 
-                  src={customer.avatar} 
-                  alt={customer.name}
-                  className="w-5 h-5 rounded-full object-cover border border-[#9B8778]/40" 
-                />
-              </button>
-
               {/* Primary Book Ritual CTA */}
               <motion.button
                 id="nav-book-ritual-btn"
