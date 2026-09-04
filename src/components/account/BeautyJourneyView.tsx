@@ -3,8 +3,7 @@
 // @ts-nocheck
 import React, { useState } from 'react';
 import { useApp } from '../../context/AppContext';
-import { 
-  TREATMENTS, 
+import {
   PRODUCTS, 
   BEAUTY_EXPERTS, 
   CLINIC_LOCATIONS 
@@ -376,7 +375,7 @@ export const BeautyJourneyView: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {favoriteTreatments.map(trt => (
                   <div key={trt.id} className="bg-white border border-[#E8DDD3] p-5 space-y-4">
-                    <img src={trt.image} alt={trt.name} className="w-full aspect-[16/10] object-cover rounded" />
+                    <img src={trt.image} alt={trt.name} className="w-full aspect-16/10 object-cover rounded" />
                     <div>
                       <h4 className="font-serif-luxury text-lg text-[#252525] font-medium">{trt.name}</h4>
                       <p className="text-xs text-[#9B8778]">{trt.durationMinutes} Menit • ${trt.price}</p>
