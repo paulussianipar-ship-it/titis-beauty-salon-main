@@ -308,6 +308,7 @@ export interface QuizAnswers {
 
 export type ActivePage = 
   | 'home'
+  | 'about'
   | 'treatments'
   | 'treatment-detail'
   | 'beauty-finder'

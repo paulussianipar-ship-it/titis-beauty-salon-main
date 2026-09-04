@@ -1,58 +1,57 @@
 import React, { useState } from 'react';
 import { useApp } from '../../context/AppContext';
 import { 
-  Sparkles, 
   ShoppingBag, 
-  User, 
   Menu, 
   X, 
-  Compass, 
   Calendar, 
   MessageSquare,
   ShieldCheck,
   ChevronRight,
-  Heart,
   ChevronDown
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import { TREATMENTS } from '../../data/mockData';
 
 export const Navbar: React.FC = () => {
   const { 
     activePage, 
     setActivePage, 
     openBookingWithTreatment, 
-    setIsBeautyFinderOpen,
     setIsCartOpen,
     cartCount,
     setIsConciergeOpen,
     customer,
     isAdminMode,
     setIsAdminMode,
-    setSelectedCategory
+    setSelectedTreatmentId
   } = useApp();
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isTreatmentsMenuOpen, setIsTreatmentsMenuOpen] = useState(false);
 
   const treatmentMenuItems = [
-    { label: 'Face', category: 'facial' as const },
-    { label: 'Body', category: 'body' as const },
+    { label: 'Cleanser Milk', treatmentId: 'trt-cryo-hydro-glow', image: TREATMENTS[2].image },
+    { label: 'Steamer', treatmentId: 'trt-cellular-exosome', image: TREATMENTS[1].image },
+    { label: 'Ekstrasi Komedo', treatmentId: 'trt-cryo-hydro-glow', image: TREATMENTS[2].gallery[1] },
+    { label: 'Massage', treatmentId: 'trt-sculptural-buccal', image: TREATMENTS[0].image },
+    { label: 'Facial Wash', treatmentId: 'trt-cellular-exosome', image: TREATMENTS[1].gallery[0] },
+    { label: 'Serum', treatmentId: 'trt-cellular-exosome', image: TREATMENTS[1].gallery[1] },
+    { label: 'Uap Dingin', treatmentId: 'trt-cryo-hydro-glow', image: TREATMENTS[2].image },
+    { label: 'Masker Wajah', treatmentId: 'trt-cryo-hydro-glow', image: TREATMENTS[2].gallery[2] },
+    { label: 'Oxygen', treatmentId: 'trt-cellular-exosome', image: TREATMENTS[1].image },
   ];
 
-  const navLinks = [
-    { label: 'Tes Diagnostik AI', action: () => setIsBeautyFinderOpen(true), isSpecial: true },
-    { label: 'Pakar & Dokter', page: 'experts' as const },
-    { label: 'Apotek Klinis', page: 'shop' as const },
-    { label: 'TITIS Circle', page: 'membership' as const },
-    { label: 'Jurnal Kulit', page: 'journal' as const },
-    { label: 'Panduan Pemulihan', page: 'aftercare' as const },
-    { label: 'Sanctuary & Lokasi', page: 'locations' as const },
-  ];
-
-  const goToTreatments = (category?: 'facial' | 'body') => {
-    setSelectedCategory(category ?? 'all');
-    setActivePage('treatments');
+  const goToTreatment = (treatmentId: string) => {
+    setSelectedTreatmentId(treatmentId);
+    setActivePage('treatment-detail');
     setIsTreatmentsMenuOpen(false);
+  };
+
+  const goToPage = (page: 'home' | 'about' | 'locations') => {
+    setActivePage(page);
+    setIsTreatmentsMenuOpen(false);
+    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -92,67 +91,31 @@ export const Navbar: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             
-            {/* Left Nav links on desktop */}
+            {/* Requested primary navigation */}
             <nav className="hidden lg:flex items-center space-x-6">
+              <button onClick={() => goToPage('home')} className="text-xs uppercase tracking-[0.16em] text-[#252525]/75 hover:text-[#252525]">Home</button>
+              <button onClick={() => goToPage('about')} className="text-xs uppercase tracking-[0.16em] text-[#252525]/75 hover:text-[#252525]">Tentang</button>
               <div className="relative">
                 <button
-                  id="nav-link-treatments"
+                  id="nav-link-perawatan"
                   onClick={() => setIsTreatmentsMenuOpen(!isTreatmentsMenuOpen)}
-                  className={`text-xs tracking-[0.16em] uppercase transition-all duration-300 relative py-1 flex items-center gap-2 ${
-                    activePage === 'treatments'
-                      ? 'text-[#252525] font-semibold'
-                      : 'text-[#252525]/75 hover:text-[#252525]'
-                  }`}
+                  className="flex items-center gap-2 py-1 text-xs uppercase tracking-[0.16em] text-[#252525]/75 hover:text-[#252525]"
                 >
-                  <span>Treatments</span>
-                  <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${isTreatmentsMenuOpen ? 'rotate-180' : ''}`} />
+                  <span>Perawatan</span>
+                  <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${isTreatmentsMenuOpen ? 'rotate-180' : ''}`} />
                 </button>
-
                 {isTreatmentsMenuOpen && (
-                  <div className="absolute left-0 top-full mt-3 w-44 bg-white border border-[#E8DDD3] shadow-xl z-50">
+                  <div className="absolute left-0 top-full z-50 mt-3 grid w-88 grid-cols-3 gap-2 border border-[#E8DDD3] bg-white p-3 shadow-xl">
                     {treatmentMenuItems.map((item) => (
-                      <button
-                        key={item.label}
-                        onClick={() => goToTreatments(item.category)}
-                        className="block w-full text-left px-4 py-3 text-xs uppercase tracking-[0.14em] text-[#252525] hover:bg-[#F7F4EF] transition-colors border-b border-[#E8DDD3] last:border-b-0"
-                      >
-                        {item.label}
+                      <button key={item.label} onClick={() => goToTreatment(item.treatmentId)} className="group text-left">
+                        <img src={item.image} alt={item.label} className="h-16 w-full object-cover" />
+                        <span className="mt-1 block text-[9px] uppercase tracking-[0.08em] text-[#252525] group-hover:text-[#9B8778]">{item.label}</span>
                       </button>
                     ))}
                   </div>
                 )}
               </div>
-
-              {navLinks.slice(0, 4).map((link, idx) => (
-                <button
-                  key={idx}
-                  id={`nav-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
-                  onClick={() => {
-                    if (link.action) {
-                      link.action();
-                    } else if (link.page) {
-                      setActivePage(link.page);
-                      setIsTreatmentsMenuOpen(false);
-                    }
-                  }}
-                  className={`text-xs tracking-[0.16em] uppercase transition-all duration-300 relative py-1 ${
-                    link.isSpecial 
-                      ? 'text-[#9B8778] font-semibold flex items-center space-x-1 hover:text-[#252525]' 
-                      : activePage === link.page 
-                        ? 'text-[#252525] font-semibold' 
-                        : 'text-[#252525]/75 hover:text-[#252525]'
-                  }`}
-                >
-                  {link.isSpecial && <Sparkles className="w-3 h-3 text-[#C4A47C]" />}
-                  <span>{link.label}</span>
-                  {!link.isSpecial && activePage === link.page && (
-                    <motion.div 
-                      layoutId="navUnderline" 
-                      className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-[#252525]" 
-                    />
-                  )}
-                </button>
-              ))}
+              <button onClick={() => goToPage('locations')} className="text-xs uppercase tracking-[0.16em] text-[#252525]/75 hover:text-[#252525]">Lokasi</button>
             </nav>
 
             {/* Centered Brand Logo */}
@@ -176,65 +139,6 @@ export const Navbar: React.FC = () => {
 
             {/* Right Nav links & Actions */}
             <div className="hidden lg:flex items-center space-x-6">
-              <nav className="flex items-center space-x-5 mr-2">
-                <div className="relative">
-                  <button
-                    id="nav-link-treatments-right"
-                    onClick={() => setIsTreatmentsMenuOpen(!isTreatmentsMenuOpen)}
-                    className={`text-xs tracking-[0.16em] uppercase transition-all duration-300 relative py-1 flex items-center gap-2 ${
-                      activePage === 'treatments'
-                        ? 'text-[#252525] font-semibold'
-                        : 'text-[#252525]/75 hover:text-[#252525]'
-                    }`}
-                  >
-                    <span>Treatments</span>
-                    <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${isTreatmentsMenuOpen ? 'rotate-180' : ''}`} />
-                  </button>
-
-                  {isTreatmentsMenuOpen && (
-                    <div className="absolute right-0 top-full mt-3 w-44 bg-white border border-[#E8DDD3] shadow-xl z-50">
-                      {treatmentMenuItems.map((item) => (
-                        <button
-                          key={item.label}
-                          onClick={() => goToTreatments(item.category)}
-                          className="block w-full text-left px-4 py-3 text-xs uppercase tracking-[0.14em] text-[#252525] hover:bg-[#F7F4EF] transition-colors border-b border-[#E8DDD3] last:border-b-0"
-                        >
-                          {item.label}
-                        </button>
-                      ))}
-                    </div>
-                  )}
-                </div>
-
-                {navLinks.slice(4).map((link, idx) => (
-                  <button
-                    key={idx}
-                    id={`nav-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
-                    onClick={() => {
-                      if (link.action) {
-                        link.action();
-                      } else if (link.page) {
-                        setActivePage(link.page);
-                        setIsTreatmentsMenuOpen(false);
-                      }
-                    }}
-                    className={`text-xs tracking-[0.16em] uppercase transition-all duration-300 relative py-1 ${
-                      activePage === link.page 
-                        ? 'text-[#252525] font-semibold' 
-                        : 'text-[#252525]/75 hover:text-[#252525]'
-                    }`}
-                  >
-                    <span>{link.label}</span>
-                    {activePage === link.page && (
-                      <motion.div 
-                        layoutId="navUnderlineRight" 
-                        className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-[#252525]" 
-                      />
-                    )}
-                  </button>
-                ))}
-              </nav>
-
               {/* Shopping Bag Button */}
               <button
                 id="nav-cart-btn"
@@ -324,7 +228,7 @@ export const Navbar: React.FC = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden fixed inset-x-0 top-[108px] z-30 bg-[#F7F4EF] border-b border-[#E8DDD3] shadow-2xl px-6 py-8 overflow-y-auto max-h-[80vh]"
+            className="lg:hidden fixed inset-x-0 top-27 z-30 bg-[#F7F4EF] border-b border-[#E8DDD3] shadow-2xl px-6 py-8 overflow-y-auto max-h-[80vh]"
           >
             <div className="flex flex-col space-y-5">
               
@@ -350,55 +254,44 @@ export const Navbar: React.FC = () => {
                 <ChevronRight className="w-4 h-4 text-[#9B8778]" />
               </div>
 
-              {/* Navigation list */}
+              {/* Requested mobile navigation */}
               <div className="flex flex-col space-y-3 pt-2">
+                <button onClick={() => goToPage('home')} className="flex items-center justify-between border-b border-[#E8DDD3]/50 py-2.5 text-left text-sm uppercase tracking-[0.15em] text-[#252525]">
+                  <span>Home</span><ChevronRight className="h-3.5 w-3.5 text-[#9B8778]" />
+                </button>
+                <button onClick={() => goToPage('about')} className="flex items-center justify-between border-b border-[#E8DDD3]/50 py-2.5 text-left text-sm uppercase tracking-[0.15em] text-[#252525]">
+                  <span>Tentang</span><ChevronRight className="h-3.5 w-3.5 text-[#9B8778]" />
+                </button>
                 <div className="border-b border-[#E8DDD3]/50 pb-3">
                   <button
                     onClick={() => setIsTreatmentsMenuOpen(!isTreatmentsMenuOpen)}
                     className="flex items-center justify-between w-full text-left py-2.5 text-sm tracking-[0.15em] uppercase text-[#252525] hover:text-[#9B8778] transition-colors"
                   >
-                    <span>Treatments</span>
+                    <span>Perawatan</span>
                     <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${isTreatmentsMenuOpen ? 'rotate-180' : ''}`} />
                   </button>
 
                   {isTreatmentsMenuOpen && (
-                    <div className="mt-2 ml-3 space-y-2">
+                    <div className="mt-2 ml-3 grid grid-cols-2 gap-3">
                       {treatmentMenuItems.map((item) => (
                         <button
                           key={item.label}
                           onClick={() => {
-                            goToTreatments(item.category);
+                            goToTreatment(item.treatmentId);
                             setIsMobileMenuOpen(false);
                           }}
-                          className="block w-full text-left py-2 text-xs uppercase tracking-[0.14em] text-[#252525]/80 hover:text-[#252525]"
+                          className="text-left text-xs text-[#252525]/80 hover:text-[#252525]"
                         >
-                          {item.label}
+                          <img src={item.image} alt={item.label} className="h-20 w-full object-cover" />
+                          <span className="mt-1 block uppercase tracking-[0.08em]">{item.label}</span>
                         </button>
                       ))}
                     </div>
                   )}
                 </div>
-
-                {navLinks.map((link, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => {
-                      if (link.action) {
-                        link.action();
-                      } else if (link.page) {
-                        setActivePage(link.page);
-                      }
-                      setIsMobileMenuOpen(false);
-                    }}
-                    className="flex items-center justify-between text-left py-2.5 text-sm tracking-[0.15em] uppercase text-[#252525] border-b border-[#E8DDD3]/50 hover:text-[#9B8778] transition-colors"
-                  >
-                    <span className="flex items-center space-x-2">
-                      {link.isSpecial && <Sparkles className="w-4 h-4 text-[#C4A47C]" />}
-                      <span className={link.isSpecial ? 'text-[#9B8778] font-semibold' : ''}>{link.label}</span>
-                    </span>
-                    <ChevronRight className="w-3.5 h-3.5 text-[#9B8778]" />
-                  </button>
-                ))}
+                <button onClick={() => goToPage('locations')} className="flex items-center justify-between border-b border-[#E8DDD3]/50 py-2.5 text-left text-sm uppercase tracking-[0.15em] text-[#252525]">
+                  <span>Lokasi</span><ChevronRight className="h-3.5 w-3.5 text-[#9B8778]" />
+                </button>
               </div>
 
               {/* Mobile CTAs */}

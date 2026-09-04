@@ -8,6 +8,7 @@ import { AppProvider, useApp } from './context/AppContext';
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
 import { HomeView } from './components/home/HomeView';
+import { AboutView } from './components/about/AboutView';
 import { TreatmentExplorer } from './components/treatments/TreatmentExplorer';
 import { TreatmentDetailModal } from './components/treatments/TreatmentDetailModal';
 import { BeautyExpertsView } from './components/experts/BeautyExpertsView';
@@ -37,6 +38,7 @@ const MainContent: React.FC = () => {
       {/* Main Active Page View */}
       <main className="flex-1">
         {activePage === 'home' && <HomeView />}
+        {activePage === 'about' && <AboutView />}
         {activePage === 'treatments' && <TreatmentExplorer />}
         {activePage === 'treatment-detail' && <TreatmentDetailModal />}
         {activePage === 'experts' && <BeautyExpertsView />}

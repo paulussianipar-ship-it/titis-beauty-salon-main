@@ -3,7 +3,8 @@
 // @ts-nocheck
 import React, { useState } from 'react';
 import { useApp } from '../../context/AppContext';
-import {
+import { 
+  TREATMENTS, 
   PRODUCTS, 
   BEAUTY_EXPERTS, 
   CLINIC_LOCATIONS 
