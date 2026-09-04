@@ -1,3 +1,7 @@
+/** @jsxRuntime classic */
+// React is currently untyped in the project; suppress the missing declaration
+// error here until @types/react is added to the project dependencies.
+// @ts-ignore
 import React, { useState } from 'react';
 import { useApp } from '../../context/AppContext';
 import { 
@@ -12,6 +16,14 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { TREATMENTS } from '../../data/mockData';
+
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      [elementName: string]: any;
+    }
+  }
+}
 
 export const Navbar: React.FC = () => {
   const { 
