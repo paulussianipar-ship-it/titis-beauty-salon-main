@@ -82,8 +82,7 @@ export const HomeView: React.FC = () => {
             transition={{ duration: 0.9, delay: 0.2 }}
             className="font-serif-luxury text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight leading-[1.08] mb-6 text-[#F7F4EF]"
           >
-            Sains Keanggunan Abadi.<br />
-            <span className="italic font-normal text-[#E8DDD3]">Kecantikan Anda. Ritual Anda.</span>
+            Sains Keanggunan Abadi.
           </motion.h1>
 
           <motion.p

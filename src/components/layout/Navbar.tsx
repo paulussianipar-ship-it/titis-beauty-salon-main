@@ -131,9 +131,6 @@ export const Navbar: React.FC = () => {
                   </span>
                   <span className="w-1.5 h-1.5 rounded-full bg-[#C4A47C] -mt-2" />
                 </div>
-                <span className="text-[9px] tracking-[0.35em] text-[#9B8778] uppercase -mt-1 font-medium">
-                  Kecantikan Anda. Ritual Anda.
-                </span>
               </button>
             </div>
 
@@ -169,14 +166,6 @@ export const Navbar: React.FC = () => {
                   alt={customer.name}
                   className="w-5 h-5 rounded-full object-cover border border-[#9B8778]/40" 
                 />
-                <div className="text-left">
-                  <div className="text-[10px] font-semibold tracking-wider leading-none">
-                    {customer.name.split(' ')[0]}
-                  </div>
-                  <div className="text-[8px] text-[#9B8778] font-medium tracking-widest uppercase leading-none mt-0.5">
-                    {customer.tier} • {customer.points} poin
-                  </div>
-                </div>
               </button>
 
               {/* Primary Book Ritual CTA */}
@@ -246,10 +235,6 @@ export const Navbar: React.FC = () => {
                     alt={customer.name} 
                     className="w-10 h-10 rounded-full object-cover border border-[#9B8778]"
                   />
-                  <div>
-                    <h4 className="text-sm font-semibold text-[#252525]">{customer.name}</h4>
-                    <p className="text-xs text-[#9B8778] uppercase tracking-wider">Anggota {customer.tier} • {customer.points} poin</p>
-                  </div>
                 </div>
                 <ChevronRight className="w-4 h-4 text-[#9B8778]" />
               </div>
