@@ -130,22 +130,6 @@ export const Navbar: React.FC = () => {
               <button onClick={() => goToPage('locations')} className="text-xs uppercase tracking-[0.16em] text-[#252525]/75 hover:text-[#252525]">Lokasi</button>
             </nav>
 
-            {/* Centered Brand Logo */}
-            <div className="flex-1 lg:flex-none text-center">
-              <button
-                id="brand-logo-btn"
-                onClick={() => setActivePage('home')}
-                className="group inline-flex flex-col items-center justify-center text-left"
-              >
-                <div className="flex items-center space-x-1">
-                  <span className="font-serif-luxury text-3xl md:text-4xl tracking-[0.25em] text-[#252525] font-light uppercase transition-transform duration-500 group-hover:tracking-[0.3em]">
-                    TITIS
-                  </span>
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#C4A47C] -mt-2" />
-                </div>
-              </button>
-            </div>
-
             {/* Right Nav links & Actions */}
             <div className="hidden lg:flex items-center space-x-6">
               {/* Shopping Bag Button */}

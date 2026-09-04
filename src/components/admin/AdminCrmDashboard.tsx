@@ -1,3 +1,4 @@
+/** @jsxRuntime classic */
 import React, { useState } from 'react';
 import { useApp } from '../../context/AppContext';
 import { 
@@ -25,17 +26,24 @@ import {
   UserCheck
 } from 'lucide-react';
 
+type AdminTab = 'appointments' | 'clients' | 'treatments' | 'analytics';
+
+interface AdminTabOption {
+  id: AdminTab;
+  label: string;
+}
+
 export const AdminCrmDashboard: React.FC = () => {
   const { bookings, updateBookingStatus, showToast } = useApp();
 
-  const [adminTab, setAdminTab] = useState<'appointments' | 'clients' | 'treatments' | 'analytics'>('appointments');
+  const [adminTab, setAdminTab] = useState<AdminTab>('appointments');
   const [statusFilter, setStatusFilter] = useState<string>('all');
-  const [searchClient, setSearchClient] = useState('');
+  const [searchClient, setSearchClient] = useState<string>('');
 
-  const totalRevenue = bookings.reduce((sum, b) => sum + (b.paymentStatus === 'paid' ? b.totalAmount : 0), 18450);
-  const totalAppointmentsCount = bookings.length + 42;
+  const totalRevenue: number = bookings.reduce((sum: number, b: Booking) => sum + (b.paymentStatus === 'paid' ? b.totalAmount : 0), 18450);
+  const totalAppointmentsCount: number = bookings.length + 42;
 
-  const filteredBookings = bookings.filter(b => {
+  const filteredBookings: Booking[] = bookings.filter((b: Booking) => {
     if (statusFilter !== 'all' && b.status !== statusFilter) return false;
     if (searchClient.trim()) {
       const q = searchClient.toLowerCase();
@@ -146,7 +154,7 @@ export const AdminCrmDashboard: React.FC = () => {
                 <input 
                   type="text"
                   value={searchClient}
-                  onChange={(e) => setSearchClient(e.target.value)}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchClient(e.target.value)}
                   placeholder="Cari berdasarkan nama tamu, kode pass, ritual..."
                   className="w-full pl-9 pr-4 py-2 bg-[#F7F4EF] border border-[#E8DDD3] text-xs text-[#252525] focus:outline-none"
                 />
@@ -155,7 +163,7 @@ export const AdminCrmDashboard: React.FC = () => {
               <div className="flex items-center space-x-3">
                 <select
                   value={statusFilter}
-                  onChange={(e) => setStatusFilter(e.target.value)}
+                  onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setStatusFilter(e.target.value)}
                   className="px-3 py-2 bg-[#F7F4EF] border border-[#E8DDD3] text-xs text-[#252525] focus:outline-none"
                 >
                   <option value="all">Semua Status</option>
@@ -181,7 +189,7 @@ export const AdminCrmDashboard: React.FC = () => {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-[#E8DDD3]">
-                  {filteredBookings.map((bk) => (
+                  {filteredBookings.map((bk: Booking) => (
                     <tr key={bk.id} className="hover:bg-[#F7F4EF]/50 transition-colors">
                       <td className="p-4 font-mono font-semibold text-[#252525]">{bk.bookingCode}</td>
                       <td className="p-4">
@@ -321,7 +329,7 @@ export const AdminCrmDashboard: React.FC = () => {
 
                   <div className="flex items-center space-x-6">
                     <div className="text-right">
-                      <span className="text-xs font-serif-luxury text-xl font-bold text-[#252525]">${trt.price}</span>
+                      <span className="font-serif-luxury text-xl font-bold text-[#252525]">${trt.price}</span>
                       <span className="text-[10px] text-[#9B8778] block">★ {trt.rating} ({trt.reviewCount})</span>
                     </div>
 
