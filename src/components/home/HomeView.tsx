@@ -84,8 +84,7 @@ export const HomeView: React.FC = () => {
             transition={{ duration: 0.9, delay: 0.2 }}
             className="font-serif-luxury text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight leading-[1.08] mb-6 text-[#F7F4EF]"
           >
-            Home of <span className="italic font-normal text-[#C4A47C]">Precision</span>
-            Beauty Salon & <span className="italic font-normal text-[#C4A47C]">Cellular</span> Wellness
+            Home of <span className="italic font-normal text-[#C4A47C]">Beauty Salon</span> & <span className="italic font-normal text-[#C4A47C]">Wellness</span>
           </motion.h1>
 
           <motion.p
