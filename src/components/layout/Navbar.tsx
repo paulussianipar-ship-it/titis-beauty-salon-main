@@ -102,7 +102,18 @@ export const Navbar: React.FC = () => {
       <header id="main-luxury-header" className="sticky top-0 z-40 bg-[#F7F4EF]/90 backdrop-blur-md border-b border-[#E8DDD3]/80 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            
+            <button
+              onClick={() => goToPage('home')}
+              className="flex shrink-0 items-center"
+              aria-label="Kembali ke halaman utama Titis Beauty Salon"
+            >
+              <img
+                src="/titis_logo.jpg"
+                alt="Titis Beauty Salon"
+                className="h-11 w-auto max-w-[150px] object-contain sm:h-12 sm:max-w-[180px]"
+              />
+            </button>
+
             {/* Requested primary navigation */}
             <nav className="hidden lg:flex items-center space-x-6">
               <button onClick={() => goToPage('home')} className="text-xs uppercase tracking-[0.16em] text-[#252525]/75 hover:text-[#252525]">Home</button>
