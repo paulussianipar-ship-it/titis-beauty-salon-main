@@ -2,7 +2,7 @@
 // @ts-nocheck
 import React, { useState } from 'react';
 import { useApp } from '../../context/AppContext';
-import { TREATMENTS, BEAUTY_EXPERTS, CLINIC_LOCATIONS, JOURNAL_ARTICLES, SAMPLE_REVIEWS } from '../../data/mockData';
+import { TREATMENTS, CLINIC_LOCATIONS, JOURNAL_ARTICLES, SAMPLE_REVIEWS } from '../../data/mockData';
 import { TreatmentCategory } from '../../types';
 import { 
   Sparkles, 
@@ -93,7 +93,7 @@ export const HomeView: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-sm sm:text-base md:text-lg font-light text-[#E8DDD3]/90 max-w-2xl mx-auto mb-10 leading-relaxed font-sans-clean"
           >
-            Perpaduan harmonis pemodelan fasia buccal osteopati, eksosom botanika klinis murni, dan dokter spesialis dermatologi untuk meremajakan struktur wajah tanpa downtime.
+            Your destination for beauty, relaxation, and well-being.
           </motion.p>
 
           {/* Hero Action Buttons */}
@@ -117,8 +117,6 @@ export const HomeView: React.FC = () => {
               onClick={() => setIsBeautyFinderOpen(true)}
               className="w-full sm:w-auto px-8 py-4 border border-[#E8DDD3] text-[#F7F4EF] hover:bg-white/15 backdrop-blur-sm transition-all duration-300 text-xs tracking-[0.22em] uppercase font-medium flex items-center justify-center space-x-2"
             >
-              <Sparkles className="w-4 h-4 text-[#C4A47C]" />
-              <span>Rancang Ritual Kulit AI</span>
             </button>
           </motion.div>
 
@@ -481,83 +479,6 @@ export const HomeView: React.FC = () => {
             </div>
           </div>
 
-        </div>
-      </section>
-
-      {/* 5. The Artisans (Beauty Experts Showcase) */}
-      <section id="experts-showcase-section" className="py-24 px-6 max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16">
-          <div>
-            <span className="editorial-badge text-[#9B8778]">Para Pakar Medis & Terapis</span>
-            <h2 className="font-serif-luxury text-3xl sm:text-5xl text-[#252525] font-light mt-2">
-              Profil Para Pakar
-            </h2>
-          </div>
-
-          <button
-            onClick={() => setActivePage('experts')}
-            className="mt-4 md:mt-0 inline-flex items-center space-x-2 text-xs uppercase tracking-[0.2em] font-semibold text-[#252525] hover:text-[#9B8778] transition-colors"
-          >
-            <span>Lihat Semua Profil Pakar</span>
-            <ArrowRight className="w-4 h-4" />
-          </button>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {BEAUTY_EXPERTS.map((expert) => (
-            <div 
-              key={expert.id}
-              className="bg-white border border-[#E8DDD3] p-6 flex flex-col justify-between space-y-6 hover:shadow-xl transition-all duration-300 group"
-            >
-              <div>
-                <div className="relative aspect-3/4 overflow-hidden mb-5">
-                  <img 
-                    src={expert.avatar} 
-                    alt={expert.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
-                  />
-                  <div className="absolute bottom-2 left-2 right-2 p-2 bg-[#F7F4EF]/90 backdrop-blur-sm text-[10px] uppercase tracking-widest text-[#252525] font-bold text-center border border-[#E8DDD3]">
-                    {expert.role} • {expert.experienceYears} Th Pengalaman
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-1 text-[#C4A47C] mb-1">
-                  <Star className="w-3.5 h-3.5 fill-[#C4A47C]" />
-                  <span className="text-xs font-bold text-[#252525]">{expert.rating}</span>
-                  <span className="text-[10px] text-[#9B8778]">({expert.reviewCount} ulasan)</span>
-                </div>
-
-                <h3 className="font-serif-luxury text-xl font-medium text-[#252525]">
-                  {expert.name}
-                </h3>
-                <p className="text-[11px] text-[#9B8778] font-medium tracking-wide mt-0.5">
-                  {expert.title}
-                </p>
-
-                <p className="text-xs text-[#252525]/75 font-light line-clamp-3 mt-3 leading-relaxed">
-                  "{expert.quote}"
-                </p>
-              </div>
-
-              <div className="pt-4 border-t border-[#E8DDD3] space-y-3">
-                <div className="flex flex-wrap gap-1">
-                  {expert.specializations.slice(0, 2).map((spec, i) => (
-                    <span key={i} className="text-[9px] px-2 py-0.5 bg-[#E8DDD3]/60 text-[#252525] tracking-wider uppercase">
-                      {spec}
-                    </span>
-                  ))}
-                </div>
-
-                <button
-                  onClick={() => openBookingWithTreatment(undefined, expert.id)}
-                  className="w-full py-2.5 bg-[#252525] text-white hover:bg-[#3d3d3d] text-[10px] uppercase tracking-[0.2em] font-semibold transition-colors flex items-center justify-center space-x-2"
-                >
-                  <Calendar className="w-3.5 h-3.5 text-[#C4A47C]" />
-                  <span>Pilih {expert.name.split(' ')[0]}</span>
-                </button>
-              </div>
-            </div>
-          ))}
         </div>
       </section>
 

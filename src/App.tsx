@@ -16,7 +16,6 @@ import { HomeView } from './components/home/HomeView';
 import { AboutView } from './components/about/AboutView';
 import { TreatmentExplorer } from './components/treatments/TreatmentExplorer';
 import { TreatmentDetailModal } from './components/treatments/TreatmentDetailModal';
-import { BeautyExpertsView } from './components/experts/BeautyExpertsView';
 import { BeautyJourneyView } from './components/account/BeautyJourneyView';
 import { BeautyShopView } from './components/shop/BeautyShopView';
 import { MembershipView } from './components/membership/MembershipView';
@@ -46,7 +45,6 @@ const MainContent: React.FC = () => {
         {activePage === 'about' && <AboutView />}
         {activePage === 'treatments' && <TreatmentExplorer />}
         {activePage === 'treatment-detail' && <TreatmentDetailModal />}
-        {activePage === 'experts' && <BeautyExpertsView />}
         {(activePage === 'account' || activePage === 'journey') && <BeautyJourneyView />}
         {activePage === 'shop' && <BeautyShopView />}
         {activePage === 'membership' && <MembershipView />}
