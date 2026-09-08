@@ -136,213 +136,51 @@ export const HomeView: React.FC = () => {
       <section id="philosophy-section" className="py-24 sm:py-32 px-6 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          ```tsx
-import React from "react";
-
-const HomeView: React.FC = () => {
-    return (
-        <section
-            id="about"
-            className="relative overflow-hidden bg-white py-16 md:py-24"
-        >
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-
-                    {/* =========================
-                        IMAGE SECTION
-                    ========================== */}
-                    <div className="flex justify-center">
-                        {/* Desktop Image */}
-                        <img
-                            src="/images/Group-1225-full-1.png"
-                            alt="dr. Evelyne Anggun"
-                            className="
-                                hidden
-                                w-full
-                                max-w-xl
-                                object-contain
-                                lg:block
-                            "
-                        />
-
-                        {/* Mobile Image */}
-                        <img
-                            src="/images/Group-1018-2.png"
-                            alt="dr. Evelyne Anggun"
-                            className="
-                                block
-                                w-full
-                                max-w-md
-                                object-contain
-                                lg:hidden
-                            "
-                        />
-                    </div>
-
-                    {/* =========================
-                        CONTENT SECTION
-                    ========================== */}
-                    <div className="relative">
-
-                        {/* Small Title */}
-                        <div className="mb-4">
-                            <h2
-                                className="
-                                    text-sm
-                                    font-medium
-                                    uppercase
-                                    tracking-[0.25em]
-                                    text-[#9B6B43]
-                                "
-                            >
-                                About Me
-                            </h2>
-                        </div>
-
-                        {/* Main Heading */}
-                        <h3
-                            className="
-                                mb-6
-                                max-w-2xl
-                                text-3xl
-                                font-semibold
-                                leading-tight
-                                text-gray-900
-                                md:text-4xl
-                            "
-                        >
-                            16+ Tahun Membantu Meningkatkan Kepercayaan Diri
-                            Pasien
-                        </h3>
-
-                        {/* Description */}
-                        <div
-                            className="
-                                space-y-5
-                                text-base
-                                leading-8
-                                text-gray-600
-                            "
-                        >
-                            <p>
-                                <strong className="font-semibold text-gray-800">
-                                    dr. Evelyne Anggun, Dipl. AAAM, CIBTAC UK
-                                </strong>{" "}
-                                – Memiliki pengalaman lebih dari 16 tahun di
-                                dunia estetika, fokusnya adalah pada peremajaan
-                                & peningkatan kepercayaan diri pasien melalui
-                                Thread Lift, Anti Wrinkle Injection, dan Filler.
-                            </p>
-
-                            <p>
-                                Ketertarikannya pada dunia kecantikan telah
-                                muncul sejak dr. Evelyne masih belia. Setelah
-                                menyelesaikan kuliah kedokteran di Universitas
-                                Atmajaya, dr. Evelyne semakin jatuh cinta
-                                dengan dunia estetika. Hal ini mendorong dr.
-                                Evelyne melanjutkan pendidikan ke American
-                                Aging and Medicine of CIBTTAC, London, UK.
-                            </p>
-
-                            <p>
-                                Dengan diploma dan sertifikasi global, dr.
-                                Evelyne bertekad untuk meningkatkan dan
-                                menonjolkan ciri khas pasien tanpa mengubah
-                                wajah mereka. Dokter Evelyne mengutamakan
-                                perawatan menyeluruh dan efisien dengan
-                                pendekatan hangat dan pemahaman yang mendalam
-                                di Skin Evo Aesthetic Clinic Jakarta.
-                            </p>
-
-                            {/* Clinic Information */}
-                            <div
-                                className="
-                                    rounded-2xl
-                                    bg-gray-50
-                                    p-6
-                                    shadow-sm
-                                "
-                            >
-                                <div className="space-y-3">
-                                    <p>
-                                        <span className="font-semibold text-gray-800">
-                                            Sertifikat Kompetensi:
-                                        </span>{" "}
-                                        WY00002055026007
-                                    </p>
-
-                                    <p>
-                                        <span className="font-semibold text-gray-800">
-                                            No. Izin Klinik:
-                                        </span>{" "}
-                                        0279011130056
-                                    </p>
-
-                                    <p>
-                                        <span className="font-semibold text-gray-800">
-                                            Alamat Klinik:
-                                        </span>{" "}
-                                        Jl. Gedung Pinang Blok PT No. 16,
-                                        Pondok Pinang, Jakarta Selatan
-                                    </p>
-
-                                    <p>
-                                        <span className="font-semibold text-gray-800">
-                                            Jam Operasional:
-                                        </span>{" "}
-                                        Senin–Sabtu, 10.00–17.00 WIB
-                                    </p>
-
-                                    <p>
-                                        <span className="font-semibold text-gray-800">
-                                            Kontak Resmi:
-                                        </span>{" "}
-                                        <a
-                                            href="tel:+6281288828787"
-                                            className="text-[#9B6B43] transition hover:underline"
-                                        >
-                                            +62 812-8882-8787
-                                        </a>
-                                    </p>
-
-                                    <p>
-                                        <span className="font-semibold text-gray-800">
-                                            Email:
-                                        </span>{" "}
-                                        <a
-                                            href="mailto:skinfinityjakarta@gmail.com"
-                                            className="text-[#9B6B43] transition hover:underline"
-                                        >
-                                            skinfinityjakarta@gmail.com
-                                        </a>
-                                    </p>
-                                </div>
-                            </div>
-
-                            {/* Manager Information */}
-                            <p>
-                                Untuk memastikan standar layanan dan
-                                transparansi, klinik ini dikelola bersama oleh{" "}
-                                <strong className="font-semibold text-gray-800">
-                                    Rini Christanti
-                                </strong>{" "}
-                                sebagai Manager. Rini Christanti bertanggung
-                                jawab atas operasional dan pengelolaan layanan
-                                klinik, sehingga seluruh proses pemasaran dan
-                                pelayanan berjalan sesuai standar legalitas
-                                dan profesionalisme.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+          <div className="lg:col-span-5 space-y-6">
+            <div className="relative overflow-hidden bg-[#E8DDD3]/30 border border-[#E8DDD3] p-4 sm:p-6">
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcSet="https://dokterevelyneanggun.com/wp-content/uploads/2023/05/Group-1018-2.png"
+                />
+                <img
+                  src="https://dokterevelyneanggun.com/wp-content/uploads/2023/05/Group-1225-full-1.png"
+                  alt="dr. Evelyne Anggun dalam praktik estetika medis"
+                  className="w-full h-auto object-contain"
+                  loading="lazy"
+                />
+              </picture>
             </div>
-        </section>
-    );
-};
 
-export default HomeView;
-```
-
+            <div className="space-y-5">
+              <span className="editorial-badge text-[#9B8778]">About Me</span>
+              <h2 className="font-serif-luxury text-3xl sm:text-5xl text-[#252525] font-light leading-tight">
+                16+ Tahun Membantu Meningkatkan Kepercayaan Diri Pasien
+              </h2>
+              <div className="w-16 h-[1.5px] bg-[#9B8778]" />
+              <div className="space-y-4 text-sm text-[#252525]/80 font-light leading-relaxed">
+                <p>
+                  dr. Evelyne Anggun, Dipl. AAAM, CIBTAC UK memiliki pengalaman lebih dari 16 tahun di dunia estetika, dengan fokus pada peremajaan dan peningkatan kepercayaan diri pasien melalui Thread Lift, Anti Wrinkle Injection, dan Filler.
+                </p>
+                <p>
+                  Setelah menyelesaikan pendidikan kedokteran di Universitas Atma Jaya, ketertarikannya pada dunia estetika mendorong dr. Evelyne melanjutkan pendidikan ke American Academy of Aesthetic Medicine dan CIBTAC London, UK.
+                </p>
+                <p>
+                  Dengan diploma dan sertifikasi global, dr. Evelyne bertekad untuk meningkatkan dan menonjolkan ciri khas pasien tanpa mengubah wajah mereka. Ia mengutamakan perawatan menyeluruh dan efisien dengan pendekatan hangat serta pemahaman mendalam.
+                </p>
+                <p>
+                  Sertifikat Kompetensi: WY00002055026007<br />
+                  No. Izin Klinik: 0279011130056<br />
+                  Alamat Klinik: Jl. Gedung Pinang Blok PT No. 16, Pondok Pinang, Jakarta Selatan<br />
+                  Jam Operasional: Senin-Sabtu, 10.00-17.00 WIB<br />
+                  Kontak Resmi: +62 812-8882-8787<br />
+                  Email: skinfinityjakarta@gmail.com
+                </p>
+                <p>
+                  Klinik ini dikelola bersama oleh Rini Christanti sebagai Manager yang bertanggung jawab atas operasional dan pengelolaan layanan klinik agar seluruh proses pemasaran dan pelayanan berjalan sesuai standar legalitas dan profesionalisme.
+                </p>
+              </div>
+            </div>
 
             <div className="pt-4 flex flex-wrap items-center gap-6">
               <button
