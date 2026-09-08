@@ -127,22 +127,6 @@ export const HomeView: React.FC = () => {
             transition={{ duration: 1, delay: 0.8 }}
             className="mt-16 pt-8 border-t border-white/20 grid grid-cols-2 md:grid-cols-4 gap-6 text-left"
           >
-            <div>
-              <p className="text-[#C4A47C] font-serif-luxury text-xl sm:text-2xl">99.6%</p>
-              <p className="text-[10px] uppercase tracking-widest text-[#E8DDD3]/80 mt-0.5">Tingkat Kepuasan Kilau</p>
-            </div>
-            <div>
-              <p className="text-[#C4A47C] font-serif-luxury text-xl sm:text-2xl">Nol</p>
-              <p className="text-[10px] uppercase tracking-widest text-[#E8DDD3]/80 mt-0.5">Waktu Pemulihan / Downtime</p>
-            </div>
-            <div>
-              <p className="text-[#C4A47C] font-serif-luxury text-xl sm:text-2xl">5 Miliar</p>
-              <p className="text-[10px] uppercase tracking-widest text-[#E8DDD3]/80 mt-0.5">Eksosom Tumbuhan Aktif</p>
-            </div>
-            <div>
-              <p className="text-[#C4A47C] font-serif-luxury text-xl sm:text-2xl">4 Sanctuary</p>
-              <p className="text-[10px] uppercase tracking-widest text-[#E8DDD3]/80 mt-0.5">Klinik Privat Global</p>
-            </div>
           </motion.div>
 
         </div>
@@ -152,26 +136,41 @@ export const HomeView: React.FC = () => {
       <section id="philosophy-section" className="py-24 sm:py-32 px-6 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          <div className="lg:col-span-5 space-y-6">
-            <span className="editorial-badge text-[#9B8778]">Kebenaran Arsitektur Fasia</span>
-            <h2 className="font-serif-luxury text-3xl sm:text-5xl text-[#252525] font-light leading-tight">
-              Kami tidak menutupi fitur wajah.<br />
-              <span className="italic font-normal text-[#9B8778]">Kami membangkitkan memori biologis sel.</span>
-            </h2>
-            <div className="w-16 h-[1.5px] bg-[#9B8778]" />
-            <p className="text-sm text-[#252525]/80 font-light leading-relaxed">
-              Setiap lekukan, bayangan, dan kontur wajah menyimpan jejak postur, stres, dan ketegangan bertahun-tahun. Pendekatan konvensional seringkali bergantung pada filler artifisial yang membebani otot wajah seiring waktu.
-            </p>
-            <p className="text-sm text-[#252525]/80 font-light leading-relaxed">
-              Di Titis, para pakar kami menerapkan teknik osteopati intra-oral buccal yang mendalam, eksosom bio-fermentasi tumbuhan, dan frekuensi kriogenik sub-nol untuk merestorasi kesehatan kulit dari dalam.
-            </p>
+          <div class="elementor-element elementor-element-9120131 e-flex e-con-boxed e-con e-parent e-lazyloaded" data-id="9120131" data-element_type="container" data-e-type="container" id="about" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-aa10009 e-con-full e-flex e-con e-child" data-id="aa10009" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-4312394 elementor-hidden-mobile elementor-widget elementor-widget-image" data-id="4312394" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img fetchpriority="high" decoding="async" width="2048" height="1673" src="https://dokterevelyneanggun.com/wp-content/uploads/2023/05/Group-1225-full-1.png" class="attachment-full size-full wp-image-534" alt="" srcset="https://dokterevelyneanggun.com/wp-content/uploads/2023/05/Group-1225-full-1.png 2048w, https://dokterevelyneanggun.com/wp-content/uploads/2023/05/Group-1225-full-1-300x245.png 300w, https://dokterevelyneanggun.com/wp-content/uploads/2023/05/Group-1225-full-1-1024x836.png 1024w, https://dokterevelyneanggun.com/wp-content/uploads/2023/05/Group-1225-full-1-768x627.png 768w, https://dokterevelyneanggun.com/wp-content/uploads/2023/05/Group-1225-full-1-1536x1255.png 1536w" sizes="(max-width: 2048px) 100vw, 2048px">															</div>
+				</div>
+				<div class="elementor-element elementor-element-97d6834 elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-image" data-id="97d6834" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="1791" height="2048" src="https://dokterevelyneanggun.com/wp-content/uploads/2023/05/Group-1018-2.png" class="attachment-full size-full wp-image-537" alt="" srcset="https://dokterevelyneanggun.com/wp-content/uploads/2023/05/Group-1018-2.png 1791w, https://dokterevelyneanggun.com/wp-content/uploads/2023/05/Group-1018-2-262x300.png 262w, https://dokterevelyneanggun.com/wp-content/uploads/2023/05/Group-1018-2-895x1024.png 895w, https://dokterevelyneanggun.com/wp-content/uploads/2023/05/Group-1018-2-768x878.png 768w, https://dokterevelyneanggun.com/wp-content/uploads/2023/05/Group-1018-2-1343x1536.png 1343w" sizes="(max-width: 1791px) 100vw, 1791px">															</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-f7e86b6 e-con-full e-flex e-con e-child" data-id="f7e86b6" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-a49e846 elementor-widget__width-inherit elementor-absolute elementor-widget elementor-widget-heading" data-id="a49e846" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">About Me</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-9c80bd5 elementor-widget elementor-widget-heading" data-id="9c80bd5" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h3 class="elementor-heading-title elementor-size-default">16+ Tahun Membantu Meningkatkan Kepercayaan Diri Pasien</h3>				</div>
+				</div>
+				<div class="elementor-element elementor-element-b324d27 elementor-widget elementor-widget-text-editor" data-id="b324d27" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>dr. Evelyne Anggun, Dipl. AAAM, CIBTAC UK – Memiliki pengalaman lebih dari 16 tahun di dunia estetika, fokusnya adalah pada peremajaan &amp; peningkatan kepercayaan diri pasien melalui Thread Lift, Anti Wrinkle Injection, dan Filler.</p><p>Ketertarikannya pada dunia kecantikan telah muncul sejak dr.Evelyne masih belia. Setelah menyelesaikan kuliah kedokteran di Universitas Atmajaya, dr.Evelyne semakin jatuh cinta dengan dunia estetika. Hal ini mendorong dr.Evelyne melanjutkan pendidikan ke American Aging and Medicine of CIBTTAC, London, UK.</p><p>Dengan diploma dan sertifikasi global, dr.Evelyne bertekad untuk meningkatkan dan menonjolkan ciri khas pasien tanpa mengubah wajah mereka. Dokter Evelyne mengutamakan perawatan menyeluruh dan efisien dengan pendekatan hangat dan pemahaman yang mendalam di Skin Evo Aesthetic Clinic Jakarta</p><p>Sertifikat Kompetensi: WY00002055026007<br>No. Izin Klinik: 0279011130056<br>Alamat Klinik: : Jl. Gedung Pinang Blok PT No. 16, Pondok Pinang, Jakarta Selatan<br>Jam Operasional: Senin–Sabtu,10.00 – 17.00 WIB<br>Kontak Resmi: +62 812-8882-8787<br>Email: skinfinityjakarta@gmail.com</p><p>Untuk memastikan standar layanan dan transparansi, klinik ini dikelola bersama oleh Rini Christanti sebagai Manager. Rini Christanti bertanggung jawab atas operasional dan pengelolaan layanan klinik, sehingga seluruh proses pemasaran dan pelayanan berjalan sesuai standar legalitas dan profesionalisme.</p>								</div>
+				</div>
+				</div>
+					</div>
+				</div>
 
             <div className="pt-4 flex flex-wrap items-center gap-6">
               <button
                 onClick={() => setActivePage('treatments')}
                 className="inline-flex items-center space-x-2 text-xs uppercase tracking-[0.2em] font-semibold text-[#252525] hover:text-[#9B8778] transition-colors border-b border-[#252525] pb-1"
               >
-                <span>Lihat Katalog Ritual Lengkap</span>
+                <span>Lihat Katalog Facial Lengkap</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
 
