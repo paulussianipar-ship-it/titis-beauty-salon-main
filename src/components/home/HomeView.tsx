@@ -37,7 +37,7 @@ export const HomeView: React.FC = () => {
   const [activeCategoryTab, setActiveCategoryTab] = useState<TreatmentCategory>('facial');
 
   const categories = [
-    { key: 'facial' as const, label: 'Arsitektur Wajah', desc: 'Pemodelan buccal osteopati dan aliran limfatik kranial' },
+    { key: 'facial' as const, label: 'Perawatan Wajah', desc: 'Pemodelan buccal osteopati dan aliran limfatik kranial' },
     { key: 'skin' as const, label: 'Regenerasi Kulit', desc: '5 Miliar eksosom botanika, nano-needling, dan bio-acids' },
     { key: 'body' as const, label: 'Kontur Tubuh', desc: 'Drainase limfatik, scrub kuarsa murni, dan balutan termal' },
     { key: 'hair' as const, label: 'Trikologi & Kulit Kepala', desc: 'Ozon frekuensi tinggi, tembaga peptida, dan folikel' },
@@ -66,17 +66,6 @@ export const HomeView: React.FC = () => {
         {/* Hero Content */}
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center text-white py-24">
           
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full border border-white/30 bg-white/10 backdrop-blur-md mb-8"
-          >
-            <Sparkles className="w-3.5 h-3.5 text-[#C4A47C]" />
-            <span className="text-[11px] tracking-[0.25em] uppercase font-medium text-[#E8DDD3]">
-              Sanctuary Estetika Medis Eksklusif
-            </span>
-          </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -131,29 +120,50 @@ export const HomeView: React.FC = () => {
       <section id="philosophy-section" className="py-24 sm:py-32 px-6 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          <div className="lg:col-span-5 space-y-6">
-            <div className="relative overflow-hidden bg-[#E8DDD3]/30 border border-[#E8DDD3] p-4 sm:p-6">
-              <picture>
-                <source
-                  media="(max-width: 767px)"
-                  srcSet="https://dokterevelyneanggun.com/wp-content/uploads/2023/05/Group-1018-2.png"
-                />
-                <img
-                  src="https://dokterevelyneanggun.com/wp-content/uploads/2023/05/Group-1225-full-1.png"
-                  alt="dr. Evelyne Anggun dalam praktik estetika medis"
-                  className="w-full h-auto object-contain"
-                  loading="lazy"
-                />
-              </picture>
+          <div className="lg:col-span-12 space-y-8">
+            <div>
+              <h2 className="font-serif-luxury text-5xl sm:text-7xl text-[#252525] font-light leading-none mt-3">
+                About
+              </h2>
             </div>
 
-            <div className="space-y-5">
-              <span className="editorial-badge text-[#9B8778]">About Me</span>
-              <h2 className="font-serif-luxury text-3xl sm:text-5xl text-[#252525] font-light leading-tight">
-                16+ Tahun Membantu Meningkatkan Kepercayaan Diri Pasien
-              </h2>
-              <div className="w-16 h-[1.5px] bg-[#9B8778]" />
-              <div className="space-y-4 text-sm text-[#252525]/80 font-light leading-relaxed">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-8 items-stretch">
+              <div className="md:col-span-2 relative overflow-hidden bg-[#E8DDD3]/30 border border-[#E8DDD3] p-3 sm:p-4 md:p-5 md:h-full">
+                <div className="grid grid-cols-2 grid-rows-2 md:grid-cols-12 md:grid-rows-2 gap-2 sm:gap-3 h-full min-h-[300px] sm:min-h-[420px] md:min-h-[520px] lg:min-h-[620px]">
+                  <div className="col-span-2 row-span-1 md:col-span-7 md:row-span-2 overflow-hidden bg-[#D8CBC0]">
+                    <img
+                      src="/assets/about-1.svg"
+                      alt="Placeholder perawatan wajah"
+                      className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                      loading="lazy"
+                    />
+                    
+                  </div>
+                  <div className="col-span-1 row-span-1 md:col-span-5 md:row-span-1 overflow-hidden bg-[#E8DDD3]">
+                    <img
+                      src="/assets/about-2.svg"
+                      alt="Placeholder ritual kecantikan"
+                      className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="col-span-1 row-span-1 md:col-span-5 md:row-span-1 overflow-hidden bg-[#CFC0B4]">
+                    <img
+                      src="/assets/about-3.svg"
+                      alt="Placeholder konsultasi estetika"
+                      className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className="md:col-span-3 space-y-5">
+                <h3 className="font-serif-luxury text-3xl sm:text-4xl text-[#252525] font-light leading-tight">
+                  16+ Tahun Membantu Meningkatkan Kepercayaan Diri Pasien
+                </h3>
+                <div className="w-16 h-[1.5px] bg-[#9B8778]" />
+                <div className="space-y-4 text-sm text-[#252525]/80 font-light leading-relaxed">
                 <p>
                   dr. Evelyne Anggun, Dipl. AAAM, CIBTAC UK memiliki pengalaman lebih dari 16 tahun di dunia estetika, dengan fokus pada peremajaan dan peningkatan kepercayaan diri pasien melalui Thread Lift, Anti Wrinkle Injection, dan Filler.
                 </p>
@@ -174,6 +184,7 @@ export const HomeView: React.FC = () => {
                 <p>
                   Klinik ini dikelola bersama oleh Rini Christanti sebagai Manager yang bertanggung jawab atas operasional dan pengelolaan layanan klinik agar seluruh proses pemasaran dan pelayanan berjalan sesuai standar legalitas dan profesionalisme.
                 </p>
+                </div>
               </div>
             </div>
 
@@ -204,9 +215,8 @@ export const HomeView: React.FC = () => {
           
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
             <div>
-              <span className="editorial-badge text-[#9B8778]">Disiplin Terkurasi</span>
               <h2 className="font-serif-luxury text-3xl sm:text-5xl text-[#252525] font-light mt-2">
-                Kategori Ritual Perawatan
+                Facial yang kami tawarkan
               </h2>
             </div>
             
