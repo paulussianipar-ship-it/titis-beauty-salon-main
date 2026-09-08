@@ -136,34 +136,213 @@ export const HomeView: React.FC = () => {
       <section id="philosophy-section" className="py-24 sm:py-32 px-6 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          <div class="elementor-element elementor-element-9120131 e-flex e-con-boxed e-con e-parent e-lazyloaded" data-id="9120131" data-element_type="container" data-e-type="container" id="about" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-					<div class="e-con-inner">
-		<div class="elementor-element elementor-element-aa10009 e-con-full e-flex e-con e-child" data-id="aa10009" data-element_type="container" data-e-type="container">
-				<div class="elementor-element elementor-element-4312394 elementor-hidden-mobile elementor-widget elementor-widget-image" data-id="4312394" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-															<img fetchpriority="high" decoding="async" width="2048" height="1673" src="https://dokterevelyneanggun.com/wp-content/uploads/2023/05/Group-1225-full-1.png" class="attachment-full size-full wp-image-534" alt="" srcset="https://dokterevelyneanggun.com/wp-content/uploads/2023/05/Group-1225-full-1.png 2048w, https://dokterevelyneanggun.com/wp-content/uploads/2023/05/Group-1225-full-1-300x245.png 300w, https://dokterevelyneanggun.com/wp-content/uploads/2023/05/Group-1225-full-1-1024x836.png 1024w, https://dokterevelyneanggun.com/wp-content/uploads/2023/05/Group-1225-full-1-768x627.png 768w, https://dokterevelyneanggun.com/wp-content/uploads/2023/05/Group-1225-full-1-1536x1255.png 1536w" sizes="(max-width: 2048px) 100vw, 2048px">															</div>
-				</div>
-				<div class="elementor-element elementor-element-97d6834 elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-image" data-id="97d6834" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-															<img decoding="async" width="1791" height="2048" src="https://dokterevelyneanggun.com/wp-content/uploads/2023/05/Group-1018-2.png" class="attachment-full size-full wp-image-537" alt="" srcset="https://dokterevelyneanggun.com/wp-content/uploads/2023/05/Group-1018-2.png 1791w, https://dokterevelyneanggun.com/wp-content/uploads/2023/05/Group-1018-2-262x300.png 262w, https://dokterevelyneanggun.com/wp-content/uploads/2023/05/Group-1018-2-895x1024.png 895w, https://dokterevelyneanggun.com/wp-content/uploads/2023/05/Group-1018-2-768x878.png 768w, https://dokterevelyneanggun.com/wp-content/uploads/2023/05/Group-1018-2-1343x1536.png 1343w" sizes="(max-width: 1791px) 100vw, 1791px">															</div>
-				</div>
-				</div>
-		<div class="elementor-element elementor-element-f7e86b6 e-con-full e-flex e-con e-child" data-id="f7e86b6" data-element_type="container" data-e-type="container">
-				<div class="elementor-element elementor-element-a49e846 elementor-widget__width-inherit elementor-absolute elementor-widget elementor-widget-heading" data-id="a49e846" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">About Me</h2>				</div>
-				</div>
-				<div class="elementor-element elementor-element-9c80bd5 elementor-widget elementor-widget-heading" data-id="9c80bd5" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-					<h3 class="elementor-heading-title elementor-size-default">16+ Tahun Membantu Meningkatkan Kepercayaan Diri Pasien</h3>				</div>
-				</div>
-				<div class="elementor-element elementor-element-b324d27 elementor-widget elementor-widget-text-editor" data-id="b324d27" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-				<div class="elementor-widget-container">
-									<p>dr. Evelyne Anggun, Dipl. AAAM, CIBTAC UK – Memiliki pengalaman lebih dari 16 tahun di dunia estetika, fokusnya adalah pada peremajaan &amp; peningkatan kepercayaan diri pasien melalui Thread Lift, Anti Wrinkle Injection, dan Filler.</p><p>Ketertarikannya pada dunia kecantikan telah muncul sejak dr.Evelyne masih belia. Setelah menyelesaikan kuliah kedokteran di Universitas Atmajaya, dr.Evelyne semakin jatuh cinta dengan dunia estetika. Hal ini mendorong dr.Evelyne melanjutkan pendidikan ke American Aging and Medicine of CIBTTAC, London, UK.</p><p>Dengan diploma dan sertifikasi global, dr.Evelyne bertekad untuk meningkatkan dan menonjolkan ciri khas pasien tanpa mengubah wajah mereka. Dokter Evelyne mengutamakan perawatan menyeluruh dan efisien dengan pendekatan hangat dan pemahaman yang mendalam di Skin Evo Aesthetic Clinic Jakarta</p><p>Sertifikat Kompetensi: WY00002055026007<br>No. Izin Klinik: 0279011130056<br>Alamat Klinik: : Jl. Gedung Pinang Blok PT No. 16, Pondok Pinang, Jakarta Selatan<br>Jam Operasional: Senin–Sabtu,10.00 – 17.00 WIB<br>Kontak Resmi: +62 812-8882-8787<br>Email: skinfinityjakarta@gmail.com</p><p>Untuk memastikan standar layanan dan transparansi, klinik ini dikelola bersama oleh Rini Christanti sebagai Manager. Rini Christanti bertanggung jawab atas operasional dan pengelolaan layanan klinik, sehingga seluruh proses pemasaran dan pelayanan berjalan sesuai standar legalitas dan profesionalisme.</p>								</div>
-				</div>
-				</div>
-					</div>
-				</div>
+          ```tsx
+import React from "react";
+
+const HomeView: React.FC = () => {
+    return (
+        <section
+            id="about"
+            className="relative overflow-hidden bg-white py-16 md:py-24"
+        >
+            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+
+                    {/* =========================
+                        IMAGE SECTION
+                    ========================== */}
+                    <div className="flex justify-center">
+                        {/* Desktop Image */}
+                        <img
+                            src="/images/Group-1225-full-1.png"
+                            alt="dr. Evelyne Anggun"
+                            className="
+                                hidden
+                                w-full
+                                max-w-xl
+                                object-contain
+                                lg:block
+                            "
+                        />
+
+                        {/* Mobile Image */}
+                        <img
+                            src="/images/Group-1018-2.png"
+                            alt="dr. Evelyne Anggun"
+                            className="
+                                block
+                                w-full
+                                max-w-md
+                                object-contain
+                                lg:hidden
+                            "
+                        />
+                    </div>
+
+                    {/* =========================
+                        CONTENT SECTION
+                    ========================== */}
+                    <div className="relative">
+
+                        {/* Small Title */}
+                        <div className="mb-4">
+                            <h2
+                                className="
+                                    text-sm
+                                    font-medium
+                                    uppercase
+                                    tracking-[0.25em]
+                                    text-[#9B6B43]
+                                "
+                            >
+                                About Me
+                            </h2>
+                        </div>
+
+                        {/* Main Heading */}
+                        <h3
+                            className="
+                                mb-6
+                                max-w-2xl
+                                text-3xl
+                                font-semibold
+                                leading-tight
+                                text-gray-900
+                                md:text-4xl
+                            "
+                        >
+                            16+ Tahun Membantu Meningkatkan Kepercayaan Diri
+                            Pasien
+                        </h3>
+
+                        {/* Description */}
+                        <div
+                            className="
+                                space-y-5
+                                text-base
+                                leading-8
+                                text-gray-600
+                            "
+                        >
+                            <p>
+                                <strong className="font-semibold text-gray-800">
+                                    dr. Evelyne Anggun, Dipl. AAAM, CIBTAC UK
+                                </strong>{" "}
+                                – Memiliki pengalaman lebih dari 16 tahun di
+                                dunia estetika, fokusnya adalah pada peremajaan
+                                & peningkatan kepercayaan diri pasien melalui
+                                Thread Lift, Anti Wrinkle Injection, dan Filler.
+                            </p>
+
+                            <p>
+                                Ketertarikannya pada dunia kecantikan telah
+                                muncul sejak dr. Evelyne masih belia. Setelah
+                                menyelesaikan kuliah kedokteran di Universitas
+                                Atmajaya, dr. Evelyne semakin jatuh cinta
+                                dengan dunia estetika. Hal ini mendorong dr.
+                                Evelyne melanjutkan pendidikan ke American
+                                Aging and Medicine of CIBTTAC, London, UK.
+                            </p>
+
+                            <p>
+                                Dengan diploma dan sertifikasi global, dr.
+                                Evelyne bertekad untuk meningkatkan dan
+                                menonjolkan ciri khas pasien tanpa mengubah
+                                wajah mereka. Dokter Evelyne mengutamakan
+                                perawatan menyeluruh dan efisien dengan
+                                pendekatan hangat dan pemahaman yang mendalam
+                                di Skin Evo Aesthetic Clinic Jakarta.
+                            </p>
+
+                            {/* Clinic Information */}
+                            <div
+                                className="
+                                    rounded-2xl
+                                    bg-gray-50
+                                    p-6
+                                    shadow-sm
+                                "
+                            >
+                                <div className="space-y-3">
+                                    <p>
+                                        <span className="font-semibold text-gray-800">
+                                            Sertifikat Kompetensi:
+                                        </span>{" "}
+                                        WY00002055026007
+                                    </p>
+
+                                    <p>
+                                        <span className="font-semibold text-gray-800">
+                                            No. Izin Klinik:
+                                        </span>{" "}
+                                        0279011130056
+                                    </p>
+
+                                    <p>
+                                        <span className="font-semibold text-gray-800">
+                                            Alamat Klinik:
+                                        </span>{" "}
+                                        Jl. Gedung Pinang Blok PT No. 16,
+                                        Pondok Pinang, Jakarta Selatan
+                                    </p>
+
+                                    <p>
+                                        <span className="font-semibold text-gray-800">
+                                            Jam Operasional:
+                                        </span>{" "}
+                                        Senin–Sabtu, 10.00–17.00 WIB
+                                    </p>
+
+                                    <p>
+                                        <span className="font-semibold text-gray-800">
+                                            Kontak Resmi:
+                                        </span>{" "}
+                                        <a
+                                            href="tel:+6281288828787"
+                                            className="text-[#9B6B43] transition hover:underline"
+                                        >
+                                            +62 812-8882-8787
+                                        </a>
+                                    </p>
+
+                                    <p>
+                                        <span className="font-semibold text-gray-800">
+                                            Email:
+                                        </span>{" "}
+                                        <a
+                                            href="mailto:skinfinityjakarta@gmail.com"
+                                            className="text-[#9B6B43] transition hover:underline"
+                                        >
+                                            skinfinityjakarta@gmail.com
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Manager Information */}
+                            <p>
+                                Untuk memastikan standar layanan dan
+                                transparansi, klinik ini dikelola bersama oleh{" "}
+                                <strong className="font-semibold text-gray-800">
+                                    Rini Christanti
+                                </strong>{" "}
+                                sebagai Manager. Rini Christanti bertanggung
+                                jawab atas operasional dan pengelolaan layanan
+                                klinik, sehingga seluruh proses pemasaran dan
+                                pelayanan berjalan sesuai standar legalitas
+                                dan profesionalisme.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default HomeView;
+```
+
 
             <div className="pt-4 flex flex-wrap items-center gap-6">
               <button
