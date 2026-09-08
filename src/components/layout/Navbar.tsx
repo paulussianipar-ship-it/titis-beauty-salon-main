@@ -10,7 +10,6 @@ import {
   X, 
   Calendar, 
   MessageSquare,
-  ShieldCheck,
   ChevronRight,
   ChevronDown
 } from 'lucide-react';
@@ -34,8 +33,6 @@ export const Navbar: React.FC = () => {
     cartCount,
     setIsConciergeOpen,
     customer,
-    isAdminMode,
-    setIsAdminMode,
     setSelectedTreatmentId
   } = useApp();
 
@@ -86,14 +83,6 @@ export const Navbar: React.FC = () => {
               <span>Konsierge Estetika Langsung</span>
             </button>
 
-            <button 
-              id="topbar-admin-toggle"
-              onClick={() => setIsAdminMode(!isAdminMode)}
-              className="flex items-center space-x-1.5 px-2 py-0.5 rounded border border-[#9B8778]/40 hover:border-[#E8DDD3] text-[#E8DDD3] hover:text-white transition-all"
-            >
-              <ShieldCheck className="w-3 h-3 text-[#C4A47C]" />
-              <span className="font-semibold">{isAdminMode ? 'Tutup CRM Klinik' : 'CRM & Admin Klinik'}</span>
-            </button>
           </div>
         </div>
       </div>

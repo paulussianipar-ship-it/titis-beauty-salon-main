@@ -1,5 +1,5 @@
 /** @jsxRuntime classic */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useApp } from '../../context/AppContext';
 import { 
   TREATMENTS, 
@@ -7,7 +7,7 @@ import {
   CLINIC_LOCATIONS, 
   SAMPLE_CUSTOMERS 
 } from '../../data/mockData';
-import { Booking } from '../../types';
+import { Booking, Product } from '../../types';
 import { 
   Calendar, 
   Users, 
@@ -23,22 +23,30 @@ import {
   AlertCircle,
   FileText,
   Activity,
-  UserCheck
+  UserCheck,
+  Upload
 } from 'lucide-react';
 
-type AdminTab = 'appointments' | 'clients' | 'treatments' | 'analytics';
+type AdminTab = 'appointments' | 'clients' | 'products' | 'treatments' | 'analytics';
 
 interface AdminTabOption {
   id: AdminTab;
   label: string;
 }
 
-export const AdminCrmDashboard: React.FC = () => {
-  const { bookings, updateBookingStatus, showToast } = useApp();
+interface AdminCrmDashboardProps {
+  onLogout?: () => void;
+}
+
+export const AdminCrmDashboard: React.FC<AdminCrmDashboardProps> = ({ onLogout }) => {
+  const { allBookings, products, addProduct, updateProduct, deleteProduct, updateBookingStatus, showToast } = useApp();
+  const bookings = allBookings;
 
   const [adminTab, setAdminTab] = useState<AdminTab>('appointments');
   const [statusFilter, setStatusFilter] = useState<string>('all');
   const [searchClient, setSearchClient] = useState<string>('');
+  const [editingProduct, setEditingProduct] = useState<Product | null>(null);
+  const [isProductFormOpen, setIsProductFormOpen] = useState(false);
 
   const totalRevenue: number = bookings.reduce((sum: number, b: Booking) => sum + (b.paymentStatus === 'paid' ? b.totalAmount : 0), 18450);
   const totalAppointmentsCount: number = bookings.length + 42;
@@ -76,6 +84,12 @@ export const AdminCrmDashboard: React.FC = () => {
           </div>
 
           <div className="flex items-center space-x-3">
+            {onLogout && <button
+              onClick={onLogout}
+              className="px-4 py-2 border border-white/20 text-white text-xs uppercase tracking-wider font-semibold hover:bg-white/10 transition-colors"
+            >
+              Keluar
+            </button>}
             <button
               onClick={() => showToast('Menyinkronkan sensor IoT suite & sistem sterilisasi udara...')}
               className="px-4 py-2 bg-white/10 hover:bg-white/20 text-white text-xs uppercase tracking-wider font-semibold border border-white/20 transition-colors"
@@ -126,6 +140,7 @@ export const AdminCrmDashboard: React.FC = () => {
           {[
             { id: 'appointments' as const, label: `Janji Temu Aktif (${bookings.length})` },
             { id: 'clients' as const, label: 'Daftar & Rekam Medis Tamu' },
+            { id: 'products' as const, label: `Produk (${products.length})` },
             { id: 'treatments' as const, label: 'Katalog & Protokol Ritual' },
             { id: 'analytics' as const, label: 'Analitik Sanctuary' }
           ].map(tab => (
@@ -303,7 +318,33 @@ export const AdminCrmDashboard: React.FC = () => {
           </div>
         )}
 
-        {/* TAB 3: Treatments & Pricing Manager */}
+        {/* TAB 3: Product Manager */}
+        {adminTab === 'products' && (
+          <ProductManager
+            products={products}
+            editingProduct={editingProduct}
+            isFormOpen={isProductFormOpen}
+            onOpenForm={(product = null) => {
+              setEditingProduct(product);
+              setIsProductFormOpen(true);
+            }}
+            onCloseForm={() => {
+              setEditingProduct(null);
+              setIsProductFormOpen(false);
+            }}
+            onSave={(product) => {
+              if (editingProduct) updateProduct(product);
+              else addProduct(product);
+              setEditingProduct(null);
+              setIsProductFormOpen(false);
+            }}
+            onDelete={(product) => {
+              if (window.confirm(`Hapus ${product.name} dari katalog?`)) deleteProduct(product.id);
+            }}
+          />
+        )}
+
+        {/* TAB 4: Treatments & Pricing Manager */}
         {adminTab === 'treatments' && (
           <div className="bg-white border border-[#E8DDD3] p-6 shadow-sm space-y-6">
             <div className="flex items-center justify-between">
@@ -406,6 +447,198 @@ export const AdminCrmDashboard: React.FC = () => {
           </div>
         )}
 
+      </div>
+    </div>
+  );
+};
+
+interface ProductManagerProps {
+  products: Product[];
+  editingProduct: Product | null;
+  isFormOpen: boolean;
+  onOpenForm: (product?: Product | null) => void;
+  onCloseForm: () => void;
+  onSave: (product: Product) => void;
+  onDelete: (product: Product) => void;
+}
+
+const emptyProductForm = {
+  name: '',
+  subtitle: '',
+  category: 'skincare' as Product['category'],
+  price: '0',
+  volume: '',
+  description: '',
+  inventoryCount: '0',
+  image: ''
+};
+
+const ProductManager: React.FC<ProductManagerProps> = ({
+  products,
+  editingProduct,
+  isFormOpen,
+  onOpenForm,
+  onCloseForm,
+  onSave,
+  onDelete
+}) => {
+  const [form, setForm] = useState(emptyProductForm);
+
+  useEffect(() => {
+    if (editingProduct) {
+      setForm({
+        name: editingProduct.name,
+        subtitle: editingProduct.subtitle,
+        category: editingProduct.category,
+        price: String(editingProduct.price),
+        volume: editingProduct.volume,
+        description: editingProduct.description,
+        inventoryCount: String(editingProduct.inventoryCount),
+        image: editingProduct.image
+      });
+    } else {
+      setForm(emptyProductForm);
+    }
+  }, [editingProduct, isFormOpen]);
+
+  const updateField = (field: keyof typeof emptyProductForm, value: string) => {
+    setForm(prev => ({ ...prev, [field]: value }));
+  };
+
+  const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (!file) return;
+    if (!file.type.startsWith('image/')) return;
+
+    const reader = new FileReader();
+    reader.onload = () => updateField('image', String(reader.result));
+    reader.readAsDataURL(file);
+  };
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (!form.name.trim() || !form.image) return;
+
+    const product: Product = {
+      ...(editingProduct || {
+        id: `prod-${Date.now()}`,
+        slug: form.name.toLowerCase().trim().replace(/[^a-z0-9]+/g, '-'),
+        rating: 0,
+        reviewCount: 0,
+        keyIngredients: [],
+        clinicalResults: [],
+        howToUse: '',
+        texture: '',
+        gallery: [],
+        tags: [],
+        isBestSeller: false,
+        linkedTreatmentIds: []
+      }),
+      name: form.name.trim(),
+      subtitle: form.subtitle.trim(),
+      category: form.category,
+      price: Number(form.price) || 0,
+      volume: form.volume.trim(),
+      description: form.description.trim(),
+      inventoryCount: Number(form.inventoryCount) || 0,
+      image: form.image
+    };
+
+    onSave(product);
+  };
+
+  return (
+    <div className="space-y-6">
+      <div className="bg-white border border-[#E8DDD3] p-6 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <h3 className="font-serif-luxury text-2xl text-[#252525]">Manajemen Produk Apotek</h3>
+          <p className="text-xs text-[#9B8778] mt-1">Input formulasi baru, harga, stok, dan gambar katalog.</p>
+        </div>
+        <button
+          type="button"
+          onClick={() => onOpenForm()}
+          className="px-4 py-2 bg-[#252525] text-white text-xs uppercase tracking-wider font-semibold flex items-center gap-2"
+        >
+          <Sparkles className="w-4 h-4 text-[#C4A47C]" /> Produk Baru
+        </button>
+      </div>
+
+      {isFormOpen && (
+        <form onSubmit={handleSubmit} className="bg-white border border-[#C4A47C] p-6 shadow-sm space-y-5">
+          <div className="flex items-center justify-between">
+            <h4 className="font-serif-luxury text-xl text-[#252525]">{editingProduct ? 'Edit Produk' : 'Input Produk Baru'}</h4>
+            <button type="button" onClick={onCloseForm} className="text-xs uppercase tracking-wider text-[#9B8778] hover:text-[#252525]">Tutup</button>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-[180px_1fr] gap-6">
+            <div>
+              <label className="block aspect-square bg-[#F7F4EF] border border-dashed border-[#9B8778] cursor-pointer overflow-hidden">
+                {form.image ? <img src={form.image} alt="Preview produk" className="w-full h-full object-cover" /> : (
+                  <span className="h-full flex flex-col items-center justify-center gap-2 text-[#9B8778] text-[10px] uppercase tracking-wider text-center p-4">
+                    <Upload className="w-6 h-6" /> Pilih gambar produk
+                  </span>
+                )}
+                <input type="file" accept="image/*" onChange={handleImageChange} className="sr-only" />
+              </label>
+              <p className="text-[10px] text-[#9B8778] mt-2">JPG, PNG, atau WebP. Gambar disimpan di browser ini.</p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <label className="sm:col-span-2 text-xs font-semibold text-[#252525]">Nama produk *
+                <input required value={form.name} onChange={e => updateField('name', e.target.value)} className="admin-product-input" placeholder="Contoh: Serum Luminositas" />
+              </label>
+              <label className="text-xs font-semibold text-[#252525]">Subjudul
+                <input value={form.subtitle} onChange={e => updateField('subtitle', e.target.value)} className="admin-product-input" placeholder="Bio-active facial serum" />
+              </label>
+              <label className="text-xs font-semibold text-[#252525]">Kategori
+                <select value={form.category} onChange={e => updateField('category', e.target.value)} className="admin-product-input">
+                  <option value="skincare">Skincare</option>
+                  <option value="bodycare">Bodycare</option>
+                  <option value="haircare">Haircare</option>
+                  <option value="aftercare">Aftercare</option>
+                  <option value="devices">Devices</option>
+                </select>
+              </label>
+              <label className="text-xs font-semibold text-[#252525]">Harga (USD)
+                <input type="number" min="0" value={form.price} onChange={e => updateField('price', e.target.value)} className="admin-product-input" />
+              </label>
+              <label className="text-xs font-semibold text-[#252525]">Stok
+                <input type="number" min="0" value={form.inventoryCount} onChange={e => updateField('inventoryCount', e.target.value)} className="admin-product-input" />
+              </label>
+              <label className="text-xs font-semibold text-[#252525]">Ukuran / volume
+                <input value={form.volume} onChange={e => updateField('volume', e.target.value)} className="admin-product-input" placeholder="30 ml" />
+              </label>
+              <label className="sm:col-span-2 text-xs font-semibold text-[#252525]">Deskripsi
+                <textarea rows={3} value={form.description} onChange={e => updateField('description', e.target.value)} className="admin-product-input resize-none" placeholder="Deskripsi singkat produk..." />
+              </label>
+            </div>
+          </div>
+
+          <div className="flex justify-end gap-3 border-t border-[#E8DDD3] pt-4">
+            <button type="button" onClick={onCloseForm} className="px-4 py-2 border border-[#E8DDD3] text-xs uppercase tracking-wider font-semibold">Batal</button>
+            <button type="submit" disabled={!form.name.trim() || !form.image} className="px-4 py-2 bg-[#252525] text-white text-xs uppercase tracking-wider font-semibold disabled:opacity-40">{editingProduct ? 'Simpan Perubahan' : 'Simpan Produk'}</button>
+          </div>
+        </form>
+      )}
+
+      <div className="bg-white border border-[#E8DDD3] shadow-sm divide-y divide-[#E8DDD3]">
+        {products.map(product => (
+          <div key={product.id} className="p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div className="flex items-center gap-4 min-w-0">
+              <img src={product.image} alt={product.name} className="w-16 h-16 object-cover bg-[#F7F4EF] shrink-0" />
+              <div className="min-w-0">
+                <h4 className="font-serif-luxury text-lg text-[#252525] truncate">{product.name}</h4>
+                <p className="text-[10px] uppercase tracking-wider text-[#9B8778]">{product.category} • {product.volume || 'Tanpa volume'} • Stok {product.inventoryCount}</p>
+                <p className="text-xs text-[#252525] mt-1 line-clamp-1">{product.description || 'Belum ada deskripsi'}</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-3 sm:shrink-0">
+              <strong className="font-serif-luxury text-xl text-[#252525]">${product.price}</strong>
+              <button type="button" onClick={() => onOpenForm(product)} className="p-2 border border-[#E8DDD3] hover:border-[#252525]" title="Edit produk"><FileText className="w-4 h-4" /></button>
+              <button type="button" onClick={() => onDelete(product)} className="p-2 border border-red-200 text-red-700 hover:bg-red-50" title="Hapus produk"><XCircle className="w-4 h-4" /></button>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

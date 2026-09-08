@@ -23,6 +23,7 @@ import { BeautyJournalView } from './components/journal/BeautyJournalView';
 import { AftercareGuideView } from './components/aftercare/AftercareGuideView';
 import { LocationsView } from './components/locations/LocationsView';
 import { AdminCrmDashboard } from './components/admin/AdminCrmDashboard';
+import { AdminPortal } from './components/admin/AdminPortal';
 import { BeautyFinderModal } from './components/finder/BeautyFinderModal';
 import { SmartBookingModal } from './components/booking/SmartBookingModal';
 import { CartDrawer } from './components/cart/CartDrawer';
@@ -102,10 +103,12 @@ const MainContent: React.FC = () => {
   );
 };
 
+const isAdminRoute = window.location.pathname.replace(/\/$/, '') === '/admin';
+
 export default function App() {
   return (
     <AppProvider>
-      <MainContent />
+      {isAdminRoute ? <AdminPortal /> : <MainContent />}
     </AppProvider>
   );
 }

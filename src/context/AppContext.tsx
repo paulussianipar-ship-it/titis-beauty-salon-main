@@ -70,6 +70,9 @@ interface AppContextType {
   // Data
   treatments: Treatment[];
   products: Product[];
+  addProduct: (product: Product) => void;
+  updateProduct: (product: Product) => void;
+  deleteProduct: (productId: string) => void;
   experts: BeautyExpert[];
   articles: JournalArticle[];
   
@@ -109,7 +112,14 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   ]);
 
   const [treatments, setTreatments] = useState<Treatment[]>(TREATMENTS);
-  const [products, setProducts] = useState<Product[]>(PRODUCTS);
+  const [products, setProducts] = useState<Product[]>(() => {
+    try {
+      const savedProducts = window.localStorage.getItem('titis-products');
+      return savedProducts ? JSON.parse(savedProducts) as Product[] : PRODUCTS;
+    } catch {
+      return PRODUCTS;
+    }
+  });
   const [experts, setExperts] = useState<BeautyExpert[]>(BEAUTY_EXPERTS);
   const [articles, setArticles] = useState<JournalArticle[]>(JOURNAL_ARTICLES);
 
@@ -126,6 +136,26 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   const showToast = (msg: string) => {
     setToastMessage(msg);
+  };
+
+  useEffect(() => {
+    window.localStorage.setItem('titis-products', JSON.stringify(products));
+  }, [products]);
+
+  const addProduct = (product: Product) => {
+    setProducts(prev => [product, ...prev]);
+    showToast(`${product.name} berhasil ditambahkan ke katalog.`);
+  };
+
+  const updateProduct = (product: Product) => {
+    setProducts(prev => prev.map(item => item.id === product.id ? product : item));
+    showToast(`${product.name} berhasil diperbarui.`);
+  };
+
+  const deleteProduct = (productId: string) => {
+    setProducts(prev => prev.filter(item => item.id !== productId));
+    setCartItems(prev => prev.filter(item => item.product.id !== productId));
+    showToast('Produk dihapus dari katalog.');
   };
 
   const openBookingWithTreatment = (treatmentId?: string, expertId?: string) => {
@@ -297,6 +327,9 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         updateBookingStatus,
         treatments,
         products,
+        addProduct,
+        updateProduct,
+        deleteProduct,
         experts,
         articles,
         toastMessage,

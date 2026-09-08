@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useApp } from '../../context/AppContext';
-import { PRODUCTS } from '../../data/mockData';
 import { Product } from '../../types';
 import { 
   ShoppingBag, 
@@ -16,7 +15,7 @@ import {
 } from 'lucide-react';
 
 export const BeautyShopView: React.FC = () => {
-  const { addToCart, setIsCartOpen, showToast } = useApp();
+  const { products, addToCart, setIsCartOpen, showToast } = useApp();
 
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState('');
@@ -31,7 +30,7 @@ export const BeautyShopView: React.FC = () => {
     { id: 'aftercare', label: 'Pemulihan Pasca-Ritual' },
   ];
 
-  const filteredProducts = PRODUCTS.filter((p) => {
+  const filteredProducts = products.filter((p) => {
     if (selectedCategory !== 'all' && p.category !== selectedCategory) return false;
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase();
