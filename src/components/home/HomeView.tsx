@@ -112,12 +112,7 @@ export const HomeView: React.FC = () => {
               <span>Reservasi Jadwal</span>
             </button>
 
-            <button
-              id="hero-beauty-finder-btn"
-              onClick={() => setIsBeautyFinderOpen(true)}
-              className="w-full sm:w-auto px-8 py-4 border border-[#E8DDD3] text-[#F7F4EF] hover:bg-white/15 backdrop-blur-sm transition-all duration-300 text-xs tracking-[0.22em] uppercase font-medium flex items-center justify-center space-x-2"
-            >
-            </button>
+            
           </motion.div>
 
           {/* Hero Micro-Features Bar */}
